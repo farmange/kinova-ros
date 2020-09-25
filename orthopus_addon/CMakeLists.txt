@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   kinova_msgs
   roscpp
   std_msgs
+  std_srvs
   joy
   rospy
 )
@@ -26,3 +27,9 @@ target_link_libraries(device_freejoy ${catkin_LIBRARIES})
 add_dependencies(device_freejoy ${catkin_EXPORTED_TARGETS})
 
 
+############ hl controller
+add_executable(hl_controller
+  src/hl_controller.cpp  
+)
+target_link_libraries(hl_controller ${catkin_LIBRARIES})
+add_dependencies(hl_controller ${catkin_EXPORTED_TARGETS})
