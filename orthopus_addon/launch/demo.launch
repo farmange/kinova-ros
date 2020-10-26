@@ -11,6 +11,10 @@
   <node name="device_freejoy" pkg="orthopus_addon" type="device_freejoy" output="screen" respawn="false"/>
 
   <node name="hl_controller" pkg="orthopus_addon" type="hl_controller" output="screen" respawn="false" >
-        <rosparam file="$(find orthopus_addon)/config/settings.yaml"/>
+    <rosparam file="$(find orthopus_addon)/config/settings.yaml"/>
   </node>
+
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9090"/>
+  </include>
 </launch>

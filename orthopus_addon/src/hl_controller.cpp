@@ -18,7 +18,6 @@
  */
 #include <cmath>
 #include "ros/ros.h"
-#include "std_srvs/Empty.h"
 
 #include <orthopus_addon/hl_controller.h>
 
@@ -27,7 +26,7 @@
  */
 namespace orthopus_addon
 {
-HLController::HLController() : sampling_freq_(0.0), direction_(1)
+HLController::HLController() : sampling_freq_(0.0), direction_(1), enable_upper_limit(true), enable_lower_limit(true)
 {
   init_();
   retrieveParameters_();
@@ -113,6 +112,10 @@ void HLController::initializeServices_()
       n_.advertiseService("/orthopus_addon/reset_upper_limit", &HLController::callbackResetUpperLimit_, this);
   reset_lower_limit_service_ =
       n_.advertiseService("/orthopus_addon/reset_lower_limit", &HLController::callbackResetLowerLimit_, this);
+  enable_upper_limit_service_ =
+      n_.advertiseService("/orthopus_addon/enable_upper_limit", &HLController::callbackEnableUpperLimit_, this);
+  enable_lower_limit_service_ =
+      n_.advertiseService("/orthopus_addon/enable_lower_limit", &HLController::callbackEnableLowerLimit_, this);
 }
 
 void HLController::retrieveParameters_()
@@ -125,13 +128,13 @@ void HLController::retrieveParameters_()
 
 void HLController::init_()
 {
-  upper_limit_.joint1 = -1.0;
-  lower_limit_.joint1 = -1.0;
+  upper_limit_.joint1 = NAN;
+  lower_limit_.joint1 = NAN;
 }
 
 void HLController::handleLimits_(kinova_msgs::JointVelocity& cmd, const float divisor)
 {
-  if (upper_limit_.joint1 != -1.0)
+  if (upper_limit_.joint1 != NAN && enable_upper_limit)
   {
     /* If upper limit is set */
     if (joint_angles_.joint1 > upper_limit_.joint1)
@@ -151,7 +154,7 @@ void HLController::handleLimits_(kinova_msgs::JointVelocity& cmd, const float di
     }
   }
 
-  if (lower_limit_.joint1 != -1.0)
+  if (lower_limit_.joint1 != NAN && enable_lower_limit)
   {
     /* If lower limit is set */
     if (joint_angles_.joint1 < lower_limit_.joint1)
@@ -248,14 +251,28 @@ bool HLController::callbackSetLowerLimit_(std_srvs::Empty::Request& req, std_srv
 bool HLController::callbackResetUpperLimit_(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res)
 {
   ROS_INFO_NAMED("HLController", "callbackResetUpperLimit_");
-  setUpperLimit_(1, -1.0);
+  setUpperLimit_(1, NAN);
   return true;
 }
 
 bool HLController::callbackResetLowerLimit_(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res)
 {
   ROS_INFO_NAMED("HLController", "callbackResetLowerLimit_");
-  setLowerLimit_(1, -1.0);
+  setLowerLimit_(1, NAN);
+  return true;
+}
+
+bool HLController::callbackEnableUpperLimit_(std_srvs::SetBool::Request& req, std_srvs::SetBool::Response& res)
+{
+  ROS_INFO_NAMED("HLController", "callbackEnableUpperLimit_");
+  enable_upper_limit = req.data;
+  return true;
+}
+
+bool HLController::callbackEnableLowerLimit_(std_srvs::SetBool::Request& req, std_srvs::SetBool::Response& res)
+{
+  ROS_INFO_NAMED("HLController", "callbackEnableLowerLimit_");
+  enable_lower_limit = req.data;
   return true;
 }
 }

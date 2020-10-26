@@ -20,9 +20,10 @@
 #define HL_CONTROLLER_H
 
 #include <ros/ros.h>
-
 #include "kinova_msgs/JointAngles.h"
 #include "kinova_msgs/JointVelocity.h"
+#include "std_srvs/Empty.h"
+#include "std_srvs/SetBool.h"
 
 namespace orthopus_addon
 {
@@ -44,11 +45,15 @@ private:
   ros::ServiceServer set_lower_limit_service_;
   ros::ServiceServer reset_upper_limit_service_;
   ros::ServiceServer reset_lower_limit_service_;
+  ros::ServiceServer enable_upper_limit_service_;
+  ros::ServiceServer enable_lower_limit_service_;
 
   int sampling_freq_;
   int direction_;
   double joint_max_speed_;
   double sampling_period_;
+  bool enable_upper_limit;
+  bool enable_lower_limit;
 
   kinova_msgs::JointAngles joint_angles_;
   kinova_msgs::JointAngles upper_limit_;
@@ -75,6 +80,8 @@ private:
   bool callbackSetLowerLimit_(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res);
   bool callbackResetUpperLimit_(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res);
   bool callbackResetLowerLimit_(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res);
+  bool callbackEnableUpperLimit_(std_srvs::SetBool::Request& req, std_srvs::SetBool::Response& res);
+  bool callbackEnableLowerLimit_(std_srvs::SetBool::Request& req, std_srvs::SetBool::Response& res);
 };
-}
+}  // namespace orthopus_addon
 #endif
