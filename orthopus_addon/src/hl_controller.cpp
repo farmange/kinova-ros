@@ -275,7 +275,7 @@ bool HLController::callbackEnableLowerLimit_(std_srvs::SetBool::Request& req, st
   enable_lower_limit = req.data;
   return true;
 }
-}
+}  // namespace orthopus_addon
 
 using namespace orthopus_addon;
 

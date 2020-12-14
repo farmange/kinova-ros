@@ -1,0 +1,4994 @@
+[33mcommit adb7b4bb1ef6bca89d23dad2196be012910dccf1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: farmange <florian.armange@gmail.com>
+Date:   Mon Oct 26 11:10:54 2020 +0100
+
+    refactoring
+
+[33mcommit eef61aef3d5366feab2aa1c6842adbc5b0660a06[m
+Author: farmange <florian.armange@gmail.com>
+Date:   Fri Sep 25 17:44:35 2020 +0200
+
+    Add limit handling
+
+[33mcommit 9c9763e9fc2af1d18eebdc41f94d4abe63077329[m
+Author: farmange <florian.armange@gmail.com>
+Date:   Thu Sep 17 11:28:34 2020 +0200
+
+    Add orthopus_addon package
+
+[33mcommit 99ac039028855eb9c1000a9c51b9c1544d5ef446[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Mon Aug 10 08:49:00 2020 -0400
+
+    Add ros::init at the start of kinova_interactive_control so roslaunch works well (#311)
+
+[33mcommit 65bccbe19218114e21999d4370622f484388e7c1[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Tue Jun 16 10:09:55 2020 -0400
+
+    Added C++11 to compile options for kinova_driver (#304)
+
+[33mcommit 592e90fda95abe607b1ac4635829e05d92a1a525[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Wed Nov 27 09:20:55 2019 -0500
+
+    Cartesian velocities and finger position commands at the same time (#284)
+    
+    * Added a topic to control the arm with cartesian velocities and finger positions at the same time
+    
+    * Added a cap to the position check on the fingers so they don't always use current and oscillate to get to the position
+
+[33mcommit acf6e6d2e3e9cfb2a51507f1d190ec27df8e569b[m
+Author: Henrique Ferrolho <ferrolho@users.noreply.github.com>
+Date:   Mon Nov 25 18:48:21 2019 +0000
+
+    Adds j2s6s200.xacro and j2s6s200_standalone.xacro (#277)
+
+[33mcommit a3f51c7888e894e9c517d7df38d9791133bd2897[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Fri Nov 1 15:41:43 2019 -0400
+
+    Added the status_interval_seconds parameter to the launch file (#285)
+
+[33mcommit 4c1237d45b7a7914ecfb7d116d8ddcfd6e3a3df9[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Fri Nov 1 08:17:55 2019 -0400
+
+    Add joint velocity and torque limits in the xacro for j2n7s300 (#283)
+
+[33mcommit 22d6cef8ae705471903b994c5ed0774bc1d8bc08[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Fri Nov 1 08:16:29 2019 -0400
+
+    Add simulation torque sensing support in Gazebo (#282)
+    
+    * Added usage of the ft_sensor Gazebo ROS plugin to read the simulated torques
+    
+    * Remove a reference to the force sensor where it's not needed
+
+[33mcommit 3f29283b576bfff7770ba73ee4e1b2dc8510b813[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Mon Oct 28 12:02:24 2019 -0400
+
+    Update feature-enhancement-request.md
+
+[33mcommit ba591df08f62437a7154ff656e5aef9c3b8f30f4[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Mon Oct 28 12:02:04 2019 -0400
+
+    Update bug_report.md
+
+[33mcommit f89af9560c2fd4e72c98c9f114084e13ce56c92d[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Wed Sep 11 08:44:19 2019 -0400
+
+    Fixed the base joint after the limits change in the URDFs for some arm models
+
+[33mcommit 23dbb9b30391d5b062f82bef74047bcf8a829d57[m
+Author: Henrique Ferrolho <ferrolho@users.noreply.github.com>
+Date:   Wed Sep 11 13:28:47 2019 +0100
+
+    Minor fix of j2n6s200.xacro (#267)
+
+[33mcommit bf5091e24a5a4e4c3917fe4bece3517afe04caab[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Tue Sep 10 14:34:48 2019 -0400
+
+    Add more realistic URDF limits for actuators and fingers (#266)
+    
+    * Added joint and velocity limits for every joint - values are still unrealistic
+    
+    * Added the realistic velocity limits for joints based on data sheet
+    
+    * Added more realistic values for effort limits in URDFs
+    
+    * Added better values for position limits for the fingers
+    
+    * Add torque limit for fingers in kinova_common
+
+[33mcommit ac7c18dafef29d87c89edd37a5e4f434bcaacfaf[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Aug 12 14:12:12 2019 -0400
+
+    Replaced the rospy.WARN calls by rospy.logwarn calls
+
+[33mcommit 323042634b428354a8bc93be778440a307b7de34[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Aug 12 11:26:09 2019 -0400
+
+    Added Melodic support in the documentation
+
+[33mcommit 11494c403c5ccad571d3d0876c3c3698de3e51de[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Aug 12 10:45:52 2019 -0400
+
+    Remove RViz launch from Gazebo launch file so it's launched only once when you start MoveIt
+
+[33mcommit cfb3cc06f01c67b5481c86075fc8efe8400fd5e7[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Mon Aug 12 13:31:53 2019 +0100
+
+    Melodic support (#219)
+    
+    * fix boost::shared_ptr error and gazebo7
+    
+    * replace 'move_group' by 'move_group_interface'
+    
+    * use the urdf::JointSharedPtr type
+    
+    * use urdf::LinkConstSharedPtr
+    
+    * remove trailing white space in xacro and SRDF files
+    
+    * replace 'MoveGroupExecuteService' by 'MoveGroupExecuteTrajectoryAction'
+    
+    * do not create additional single threaded spinner for action server
+
+[33mcommit e9af1bfdff84c8d1583d67cdbd654800734cd33e[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Fri Aug 9 16:15:05 2019 -0400
+
+    Added a parameter in the driver to visualize correctly the Jaco 1 fingers (#259)
+
+[33mcommit c6910f11b2a5f95b02f7318b85037ff559c29c67[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Fri Aug 9 15:43:32 2019 -0400
+
+    Update documentation to include ROS Kinetic support in the README
+
+[33mcommit 16edae7bc1c64671181c435732b8e090bc258e57[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Fri Aug 9 14:00:49 2019 -0400
+
+    Add distal fingers controllers for Gazebo simulation (#256)
+    
+    * Add the controllers to the config files for the finger tips
+    
+    * Spawn the finger tips controllers in the launch file
+    
+    * Add transmission elements for finger tips for Gazebo simulation
+    
+    * Changed the moveit_configs to not control the finger tips during a trajectory
+
+[33mcommit 319b4dfc4cf3fa019b8768835936878a91f296c1[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Jul 30 19:58:55 2019 +0200
+
+    Define finger tips as revolute joints (#242)
+    
+    Make the finger tip a revolute joint and add publishing of finger tips in the driver.
+
+[33mcommit 7c0fc4d28ac04f072884b1373661fe80dce9b35b[m
+Merge: 5e39df0 5ba794d
+Author: jpcotekinova <jpcote@kinova.ca>
+Date:   Tue Jul 16 10:38:59 2019 -0400
+
+    Merge pull request #250 from Kinovarobotics/bugfix/gazebo-7-robot-bounces
+    
+    Fix the robot bouncing issue in Gazebo 7
+
+[33mcommit 5ba794d06167eeaf2c1e098eeb67862c99c7ddd1[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Jul 15 14:11:14 2019 -0400
+
+    Removed xlmns:xacro redefinition warning
+
+[33mcommit 5f8cf5c87ddac9b31706280d6a9c8a82ac2ed65b[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Jul 15 14:01:56 2019 -0400
+
+    Fixed the robot in Gazebo. Now it starts paused and in a valid position and the move_home script unpauses Gazebo then moves the arm.
+
+[33mcommit a2821c538e764ede5b5b8de13df2b27150a65c18[m
+Author: Alexandre Vannobel <avannobel@kinova.ca>
+Date:   Mon Jul 15 11:36:18 2019 -0400
+
+    Revert "remove world frame"
+    
+    This reverts commit 4727ab980221736fe48542416178b4f9bfa4ff47.
+
+[33mcommit 5e39df050b00efe9d14fbb332ffcf3cbc2427731[m
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Tue May 14 15:34:05 2019 -0400
+
+    Add issue templates
+
+[33mcommit 73ef56dca89400e6f19e07753d241e900cc78aca[m
+Merge: ff024c8 7e3c75b
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Tue Apr 23 09:25:01 2019 -0400
+
+    Merge pull request #221 from christian-rauch/fix_urdf
+    
+    remove world frame and visual from root frame
+
+[33mcommit 7e3c75b2281115458526fda27205ce7266e55089[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Mar 19 18:32:28 2019 +0000
+
+    remove visual from virtual links
+
+[33mcommit 4727ab980221736fe48542416178b4f9bfa4ff47[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Mar 19 18:37:54 2019 +0000
+
+    remove world frame
+
+[33mcommit f3a0fd16f16023cf2d4eb98331e5d8608f293ec2[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Mon Mar 18 21:41:43 2019 +0000
+
+    remove visual from root frame
+
+[33mcommit ff024c8e312567b6442ac3c6c8780dc052d90a11[m
+Merge: f252df6 d26339b
+Author: Sylvain Brisebois <45272650+sbrisebois@users.noreply.github.com>
+Date:   Mon Apr 8 17:06:55 2019 -0400
+
+    Merge pull request #225 from QuartzYan/master
+    
+    Repair j2n4s300.urdf
+
+[33mcommit f252df61acedae5cc029c59237b8e21666aed760[m
+Merge: 7a5b2b7 48c83ed
+Author: Alexandre Vannobel <41082816+alexvannobel@users.noreply.github.com>
+Date:   Thu Apr 4 13:24:59 2019 -0400
+
+    Merge pull request #222 from christian-rauch/mesh_colour
+    
+    Replace the plain white meshes with dark and light grey meshes for arm and fingers for the non-spherical 6DOF Jaco
+
+[33mcommit d26339be537a689e420bc9e1723d60d5079fafb3[m
+Author: Quartz <thesuperstring@outlook.com>
+Date:   Thu Apr 4 14:13:32 2019 +0800
+
+    Update j2n4s300.xacro
+
+[33mcommit c4d8c4c5edb9bf764f502d09642c2b54539338c8[m
+Author: Quartz <thesuperstring@outlook.com>
+Date:   Thu Apr 4 14:12:31 2019 +0800
+
+    Update j2n4s300.xacro
+
+[33mcommit 48c83ed5ce1814dc434ea51614f4ca2bf01913e7[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Mar 19 18:29:03 2019 +0000
+
+    grey fingers
+
+[33mcommit cd33bb72ea97f014f8f2c90438e8c0c0d7175d69[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Mar 19 18:22:20 2019 +0000
+
+    grey ring
+
+[33mcommit 996ebdd26271ab25aebad0dfba39bbf672a9655a[m
+Author: Christian Rauch <Christian.Rauch@ed.ac.uk>
+Date:   Tue Mar 19 18:08:27 2019 +0000
+
+    dark grey arm
+
+[33mcommit 7a5b2b7f04ba5ec68372c19f050238a917080e23[m
+Merge: b9e94c4 28e6be6
+Author: Sylvain Brisebois <45272650+sbrisebois@users.noreply.github.com>
+Date:   Tue Mar 12 11:47:15 2019 -0400
+
+    Merge pull request #201 from jianxiongcai/master
+    
+    Fixing compilation error on ros kinectic
+
+[33mcommit 28e6be6a1f962dff9ae0efda8aca3c615fc186af[m
+Author: Jianxiong Cai <ernestme@icloud.com>
+Date:   Wed Jan 2 17:31:37 2019 +0800
+
+    Fixing compilation error on ros kinectic
+    
+    The latest moveit disabled implicit conversation from MoveItErrorCode to Boolean, which caused compilation error here. (for details, refer to https://github.com/ros-planning/moveit/issues/759)
+
+[33mcommit b9e94c4d77dabf5796a7fdc3603d9d8e22365694[m
+Author: Jean-Christophe Guay <jcguay@kinova.ca>
+Date:   Sat Dec 1 07:46:48 2018 -0500
+
+    Update README.md
+
+[33mcommit 34968220ea6e320b88cc32d7f9d4d8dbb2b31f0e[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Mon Nov 12 13:49:46 2018 -0500
+
+    same as previous commit
+
+[33mcommit 99753220e130f05d75433fd60e16488b6000b07b[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Mon Nov 12 13:49:29 2018 -0500
+
+    change push argment default to false in setCartesianPosition
+    
+    makes more sense qith the readme: README.md on github stating that "the robot executes the waypoints without stopping".
+
+[33mcommit 8f13bb1152c70f7d2cc0ce8942a5d03e5be437c3[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Wed Oct 31 11:00:47 2018 -0400
+
+    solves the problem of controllers not found at execution when using moveit with the real robot j2s6s300
+
+[33mcommit fb1b0e0477dece91a364a8bc8b9f55eef49ab641[m
+Merge: 6998d74 60fbe1c
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Thu Oct 18 11:26:32 2018 -0400
+
+    Merge pull request #174 from samuelhovington/master
+    
+    Add the j2s6s300 for moveit!
+
+[33mcommit 60fbe1cbaaeecb4ece677be03f1aa1a7148c5a00[m
+Author: samuelhovingotn <shovington@kinova.ca>
+Date:   Thu Oct 18 11:12:11 2018 -0400
+
+    Adding the ikfast plugin for j2s6s300 arm and change the orientation of the end effector to match the real orientation
+
+[33mcommit bd846d1103c6a702cda1967841872088de25cd8d[m
+Author: samuelhovingotn <shovington@kinova.ca>
+Date:   Thu Oct 11 16:14:42 2018 -0400
+
+    adding the j2s6s300 to movit config and ikfast_plugin
+
+[33mcommit 13f96f0261d36263206eeb5ba741a184ee16e020[m
+Author: samuelhovingotn <shovington@kinova.ca>
+Date:   Wed Oct 10 10:13:37 2018 -0400
+
+    Adding some space
+
+[33mcommit 6998d745c1c14df5c41484e980b9c83e5445128d[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Thu Oct 4 14:35:15 2018 -0400
+
+    correction to bug report #166
+
+[33mcommit 949c8b22e54cbb108bb28cb3d14e99c299cb9c58[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Wed Sep 5 10:01:53 2018 -0400
+
+    Update package.xml
+
+[33mcommit 24828555554578e8fa69fe6e2cc6288845d75096[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Wed Sep 5 10:01:21 2018 -0400
+
+    Update package.xml
+
+[33mcommit 49fe96952a79b18e6c17f99e19cdd301888271f1[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Wed Sep 5 10:00:08 2018 -0400
+
+    Update package.xml
+
+[33mcommit e421bbadfae97ed1a901222f12ca51260baacf00[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Wed Sep 5 09:59:06 2018 -0400
+
+    Update package.xml
+
+[33mcommit 0a24a1ce0f6b26f96f81eabc9c4fb2f126b7398a[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Sep 4 10:29:45 2018 -0400
+
+    added license file
+
+[33mcommit 37a9864078d3632481283b95e4d45ec86340faf8[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Mon Aug 20 08:54:29 2018 -0400
+
+    I do not know why, but this paragraph was deleted accross edits
+
+[33mcommit 7e972cb2daff27c7f8d41a6e534bc165e0b613b2[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Mon Aug 20 08:50:39 2018 -0400
+
+    missing Cartesian position control title
+
+[33mcommit 88660e0fadce3e4c37c63330e802df54ac53e13d[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Wed Jul 11 10:24:56 2018 -0400
+
+    more details on tool pose action server
+
+[33mcommit b6c8b0452999736099f65fa37785e8aa12bda3ee[m
+Author: Nassif <35464719+nsaif-kinova@users.noreply.github.com>
+Date:   Tue Jul 10 12:43:10 2018 -0400
+
+    Create Example
+
+[33mcommit b9015351bab55463f1bc7c7ea6fff32380c2c72f[m
+Merge: deda4e0 8f8652e
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jul 3 12:37:22 2018 -0400
+
+    Merge pull request #146 from Kinovarobotics/revert-112-master
+    
+    Revert "Small changes  in the mass and transmission interface"
+
+[33mcommit 8f8652e72c9b104c21fcde4acb905db39945f65b[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jul 3 12:36:48 2018 -0400
+
+    Revert "Small changes  in the mass and transmission interface"
+
+[33mcommit deda4e07111de669b5fdbe37d3e35d65167edd63[m
+Merge: 6ea73bd 3fe20b9
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jul 3 12:29:00 2018 -0400
+
+    Merge pull request #112 from mpmendes/master
+    
+    Small changes  in the mass and transmission interface
+
+[33mcommit 3fe20b95580f6b4e26142229db1f6e423c34e8fc[m
+Merge: 5b5bdab 6ea73bd
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jul 3 12:28:06 2018 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit 6ea73bd5acb1b3505ecfc79c6d25048193518204[m
+Author: Nassif <35464719+nsaif-kinova@users.noreply.github.com>
+Date:   Tue Jun 26 09:38:43 2018 -0400
+
+    Update README.md
+
+[33mcommit d2876ad92c075dda8d8ebd7663712046641a30ea[m
+Author: Nassif <35464719+nsaif-kinova@users.noreply.github.com>
+Date:   Tue Jun 26 09:23:54 2018 -0400
+
+    Update README.md
+
+[33mcommit 05547ef00e8b66608ce498dd209e56f28a380e8d[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Thu Jun 14 16:48:13 2018 -0400
+
+    changed mass for hand 3 finger that was abnormally low
+
+[33mcommit cb77a1876b7eba564b9e5840cc9a70e4af1a5035[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Thu Jun 14 16:33:11 2018 -0400
+
+    changed mass of curved wrist that was abnormally low
+
+[33mcommit 0946ba802d20e8a5dd7d6c47bc500496dbf97040[m
+Author: Nassif <35464719+nsaif-kinova@users.noreply.github.com>
+Date:   Thu Jun 14 09:39:28 2018 -0400
+
+    Update README.md
+    
+    "However, the effort is a place holder for further verstion" removed from joint_state,
+
+[33mcommit c89b4ba71438b3bde4f007d470a30d7dfb579e38[m
+Merge: 0f9a47b de89d1b
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Fri Mar 2 10:11:06 2018 -0500
+
+    Merge pull request #119 from dniewinski/driver_robot_name
+    
+    Driver Joint Names
+
+[33mcommit de89d1b1c4e1c4f27a425814d5a21900b2e7a9d0[m
+Author: Dave Niewinski <dniewinski@clearpathrobotics.com>
+Date:   Wed Feb 21 13:34:12 2018 -0500
+
+    Changed joint naming in the driver to use the robot name, not the robot type, which will line up with the URDF
+
+[33mcommit 0f9a47bdbeda49cdadaea03d40ab652a37b738e8[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Tue Feb 20 10:00:37 2018 -0500
+
+    Update README.md
+
+[33mcommit 69359bf895516fc252d8335fcffd38e4a6553e50[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon Feb 12 11:27:42 2018 -0500
+
+    adjust angle limits in the URDF to match the angle limits in the real kinova robots
+
+[33mcommit d9478e71cd6433b90d11ed2c830744886d3bb2b4[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Tue Feb 6 12:05:03 2018 -0500
+
+    that's what I meant to do in my last commit. sorry for the confusion :-o.
+
+[33mcommit a17d13ada2c4b6755ebbf2226a1797c38ccbea9d[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Tue Feb 6 11:43:59 2018 -0500
+
+    added 2005 as a valid answer to setRobotCOMParam and runCOMParameterEstimation in kinova_comm (see answer to issue 114):
+
+[33mcommit 91bf7da9c6a48f23b1ca973ea44f99088711fa41[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Tue Feb 6 10:39:47 2018 -0500
+
+    small fix to detect the current control mode when sending a finger goal instead of using the angular control by default. Using the angular control can lead to the robot refusing to switch back to Cartesian control afterwards
+
+[33mcommit 5b5bdabddc8a5c87c51c294f20344399b6fa331b[m
+Author: Miguel Mendes <uc2012147117@student.uc.pt>
+Date:   Mon Jan 29 15:28:10 2018 +0000
+
+    Update kinova_inertial.xacro
+
+[33mcommit 8579b231c986ffb1211d7d99bc25dd5ec52be46d[m
+Author: Miguel Mendes <uc2012147117@student.uc.pt>
+Date:   Tue Jan 23 17:20:38 2018 +0000
+
+    Update kinova_common.xacro
+
+[33mcommit 12343c97721a1f26eab4c32bc2a7aa4c402e01ee[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jan 23 12:00:36 2018 -0500
+
+    reimplement pull request j-rivero/install_urdf
+
+[33mcommit 0ae85c3ebda95efa172b17bbd1f4464b123af33d[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jan 23 11:53:02 2018 -0500
+
+    Revert "Merge pull request #109 from j-rivero/install_urdf"
+    Introduces an error when using the package with ROS Indigo
+    This reverts commit 6a8b5d46bb94352758a27e027566667484640350, reversing
+    changes made to f784fc91df86d8a0bf6de444b75a3e1cd2adef3e.
+
+[33mcommit 863dab107d6cd96946f3741a1a9b9b65f4d3e654[m
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jan 23 11:47:49 2018 -0500
+
+    Revert "Merge pull request #111 from yowlings/mastere
+    The changes introduced errors when using Ros Indigo on 14.04
+    This reverts commit c74f062ec9220e556ee07923b148bc6bae64349d, reversing
+    changes made to 6a8b5d46bb94352758a27e027566667484640350.
+
+[33mcommit c74f062ec9220e556ee07923b148bc6bae64349d[m
+Merge: 6a8b5d4 f51caf2
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Jan 23 11:36:25 2018 -0500
+
+    Merge pull request #111 from yowlings/master
+    
+    callback data type do not match when compile with ROS kinetics
+
+[33mcommit 2f1a440f2bd6b15fff84694d29c4e0d9e88ce2b6[m
+Author: mpmendes <pereiramendes.miguel@gmail.com>
+Date:   Tue Jan 23 14:41:02 2018 +0000
+
+    Gear reduction ratios updated
+
+[33mcommit 0a754d723852c2eb4a774a3bc625dd2de30aebc4[m
+Author: mpmendes <pereiramendes.miguel@gmail.com>
+Date:   Tue Jan 23 14:39:31 2018 +0000
+
+    Mass values changed to match CAD model data
+
+[33mcommit 4b9b0a6c7c719ef348239b93824691d3e99642d0[m
+Author: mpmendes <pereiramendes.miguel@gmail.com>
+Date:   Tue Jan 23 13:31:27 2018 +0000
+
+    This reverts commit 0f6e8b3e74b2f614a2236156b0f52c91cc4c9119.
+
+[33mcommit 0f6e8b3e74b2f614a2236156b0f52c91cc4c9119[m
+Author: mpmendes <pereiramendes.miguel@gmail.com>
+Date:   Tue Jan 23 13:21:05 2018 +0000
+
+    Test
+            modified:   kinova_description/urdf/kinova_common.xacro
+            modified:   kinova_description/urdf/kinova_inertial.xacro
+
+[33mcommit 6a8b5d46bb94352758a27e027566667484640350[m
+Merge: f784fc9 981a94a
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Mon Jan 15 08:57:41 2018 -0500
+
+    Merge pull request #109 from j-rivero/install_urdf
+    
+    Install urdf files for kinova_description
+
+[33mcommit f51caf22d793e5028ac2086042e873eaecacff31[m
+Author: yowlings@gmail.com <yowlings@gmail.com>
+Date:   Mon Jan 15 18:33:24 2018 +0800
+
+    callback data type do not match when compile with ROS kinetics
+
+[33mcommit f784fc91df86d8a0bf6de444b75a3e1cd2adef3e[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon Jan 8 10:16:45 2018 -0500
+
+    placed 32 bit Ubuntu libraries in i386-linux-gnu (were 64 bit libraries before)
+
+[33mcommit 981a94a29b6384b3420e37e7d258863a1aee7a59[m
+Author: Jose Luis Rivero <jrivero@osrfoundation.org>
+Date:   Thu Jan 4 17:10:04 2018 +0100
+
+    Install urdf files for kinova_description
+
+[33mcommit 0a88f9fa00b9a8ac404732d597ee151a80c6ceed[m
+Merge: 89f18c9 40e9230
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Fri Dec 22 09:53:27 2017 -0500
+
+    Merge pull request #108 from dniewinski/std_nan_inf
+    
+    Added defines for std::isnan and std::isinf.
+
+[33mcommit 40e923013d3f304d18499ccfe9426c42f74436ec[m
+Author: Dave Niewinski <dniewinski@clearpathrobotics.com>
+Date:   Thu Dec 21 12:03:26 2017 -0500
+
+    Added defines for std::isnan and std::isinf.  Depending on build environment, this may be redundant, but it avoids compilation errors
+
+[33mcommit 89f18c9bec010096d1981b80e8598d23295d399c[m
+Merge: c1fa13c 01ffbab
+Author: martine1406 <mblouin@kinova.ca>
+Date:   Tue Dec 19 11:35:23 2017 -0500
+
+    Merge pull request #105 from k-okada/fix_kinetic
+    
+    add +add_compile_options(-std=c++11) for kinetic
+
+[33mcommit c1fa13c22626aca41d87491bbb72a3d108fcf509[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Sat Oct 21 15:14:20 2017 -0400
+
+    Formatting changes
+
+[33mcommit 78ee4c99588018d97fda5fa4196333e3b81b38b8[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Fri Oct 20 13:24:16 2017 -0400
+
+    Minor formatting changes
+
+[33mcommit 328c746c3245c779331ee1335d2730a59477ba15[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Fri Oct 20 13:23:16 2017 -0400
+
+    Minor formatting changes
+
+[33mcommit accb85e7715f588bcf9d37ddce312594b4b2a3fa[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Thu Oct 19 12:12:45 2017 -0400
+
+    Added table of contents
+
+[33mcommit 17c7a4b0e4e0af320c8345120dd4ad0acef87e49[m
+Author: Cyril Anderson <cyril.b.anderson@gmail.com>
+Date:   Thu Oct 19 12:10:39 2017 -0400
+
+    Update to README
+    
+    Added Table of Contents
+
+[33mcommit 01ffbab5f976379734a15db1291498fa7a6b6dea[m
+Author: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date:   Thu Oct 19 12:25:44 2017 +0900
+
+    add +add_compile_options(-std=c++11) for kinetic
+
+[33mcommit 1bb9c190110b07d548234a77f38b0ffd87b6d3a4[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon Jul 3 12:32:24 2017 -0400
+
+    fix for use ros package with 4 dof robot: command and feedback with only 4 actuator fields managed for 4 dof robot
+
+[33mcommit c513ec7b0e09621b6630f2289bdedbc109d31a32[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon Jul 3 12:30:02 2017 -0400
+
+    fix for use ros package with 4 dof robot: changed use advanced trajectory to basic trajectory for finger motion
+
+[33mcommit ce9f0afa25be1b22fd654c6e8c2d3eaeb29d9ac6[m
+Merge: 4ebae01 9362810
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Fri Jun 9 17:41:58 2017 -0400
+
+    Merge pull request #97 from Kinovarobotics/kinova-ros-beta
+    
+    Merge pull request #96 from ap916/improve-english  …
+
+[33mcommit 93628100e853e418fb9b0af75487b08cad2125e6[m
+Merge: f6f6e36 4ebae01
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Fri Jun 9 17:41:04 2017 -0400
+
+    Merge branch 'master' into kinova-ros-beta
+
+[33mcommit f6f6e36061850fdd91756310996629db809dc6e0[m
+Merge: 006c2e1 7d4d02a
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Fri Jun 9 17:34:48 2017 -0400
+
+    Merge pull request #96 from ap916/improve-english
+    
+    Update README.md
+
+[33mcommit 7d4d02a5c846c2fd00dd993a6a47175ef9cfb25e[m
+Author: Abhishek Pandey <ashp.pandey916@gmail.com>
+Date:   Mon Jun 5 22:14:09 2017 +0530
+
+    Update README.md
+    
+    General improvements to English and visual elements.
+
+[33mcommit 4ebae0119eb9ae5636e4ef8718c18415a78ba9b2[m
+Merge: c4b70a2 1f80dd8
+Author: mblouin <mblouin@kinova.ca>
+Date:   Tue May 30 16:29:19 2017 -0400
+
+    modified conflicting REEADME for merge between release-1.2 and master
+
+[33mcommit 1f80dd8f55cab621c8b3e4ac7bda7501ed6b5594[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Fri May 26 13:03:20 2017 -0400
+
+    Update README.md
+    
+    changed release 1.2.0 to release 1.2.1
+
+[33mcommit 9f8cc883b369e69c8d39d9028d1fb3691ea96b5d[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Mon May 15 16:31:41 2017 -0400
+
+    Update robot_parameters.yaml
+    
+    activate USB connectivity by default
+
+[33mcommit 5ecbc56b3f0ab1e998902a2070b11b455e3a4970[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Mon May 15 16:29:28 2017 -0400
+
+    Update README.md
+    
+    update to readme for v1.2.1
+
+[33mcommit 02a11b6ab8f2daf21ba464730723d308a041256f[m[33m ([m[1;33mtag: v1.2.1[m[33m)[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:21:00 2017 -0400
+
+    correction to action servers to treat emergency stop and now allow another goal to be executed directly afterwards
+
+[33mcommit a184b4efea9359632d6ca54d14b3e245b98f6ef8[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:19:39 2017 -0400
+
+    correction to home_arm service
+
+[33mcommit 15eb40540ebce2c5fc84c338cf966311defc6b8f[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:18:36 2017 -0400
+
+    added a is7dof argument to be able to load joint_7_position_controller when launching Gazebo with a 7 dof robot and use_trajectory_controller:=false
+
+[33mcommit 3158934f69194194988a801c4e137da508b7fab1[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:16:22 2017 -0400
+
+    corrected topics published by rqt tool when using Gazebo model with use_trajectory_controller = false
+
+[33mcommit 37b9a7a685482caf13488f989a3c5ff732119f66[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:15:04 2017 -0400
+
+    changed PID parameters for Gazebo model of 7 dof robot with spherical wrist
+
+[33mcommit 660f9cba119ce7b9cbc083e114796e64e1cb26bb[m
+Author: mblouin <mblouin@kinova.ca>
+Date:   Mon May 15 16:13:54 2017 -0400
+
+    commented out COM parameters to zero by default
+
+[33mcommit d33f7712909e6fe49d67ac7987515ded8e66d4d1[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Wed May 10 09:50:06 2017 -0400
+
+    Update README.md
+    
+    following comments SPC
+
+[33mcommit c4b70a214fd9e006e481fe2965e3a56e52f8d2c6[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Wed May 10 09:43:16 2017 -0400
+
+    Update README.md
+    
+    following SPC comments
+
+[33mcommit 006c2e1aa8e6cb5f3b77b97d25024c526e04c2dc[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 22 08:54:46 2017 -0400
+
+    Bugfix in demo - joints_action_client
+    
+    Bugfix in demo - joints_action_client
+
+[33mcommit b7433f5ed05033d76c5053ab3a82a2ad3c75ac3e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Mar 20 17:02:45 2017 -0400
+
+    Minor bugfix in demo
+    
+    Minor bugfix in demo
+
+[33mcommit 6b7b4b3b056faf0850bf46158b949a78b769f708[m
+Merge: 464975b e0e78bc
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Mar 20 11:50:33 2017 -0400
+
+    Merged branch kinova-ros-beta into feature/gazebo
+
+[33mcommit e0e78bc92bd55ad40787efd26b4c429a9025408a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Mar 20 11:49:36 2017 -0400
+
+    Adjusted PIDs for inertial changes
+    
+    Adjusted PIDs for inertial changes
+
+[33mcommit 0c118ac97313ae260b0e255586909644e164b3b8[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Mar 20 11:49:11 2017 -0400
+
+    added accuracy test for moveit/gazebo motion
+    
+    added accuracy test for moveit/gazebo motion
+    removed goal duration check from MoveIt
+
+[33mcommit 5acaf3d801da4da1c3c2f069565ae5dd8197a9b0[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Mar 20 11:47:31 2017 -0400
+
+    bugfix for inertial values
+    
+    bugfix for inertial values
+    joint damping set to 0, was causing the robot to go unstable
+
+[33mcommit 5610af9f121869fd7b84b85c254026204e38e1ef[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Mar 16 08:25:59 2017 -0400
+
+    Bugfix in urdf
+    
+    Bugfix in urdf
+
+[33mcommit 5a4167750f790c4bdf8da12f8bfa52a17664aabb[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 15 23:48:34 2017 -0400
+
+    Added urdf for j2n6s200
+    
+    Added urdf for j2n6s200 requested by user
+
+[33mcommit 7c251a17cefc51ac1882d6e6ed719d864b0ed0bd[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 15 23:41:27 2017 -0400
+
+    Important fix in follow trajectory server
+    
+    Fixed condition to set goal to succeeded
+    Fixed timing issue in feedback loop
+    pick and place - fixed obstacle publishing for 2nd case
+
+[33mcommit a68dbc47225f05a9c684296bb2cbace3fbf773e2[m
+Merge: eb22d0f 464975b
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Mar 12 23:34:19 2017 -0400
+
+    Merged branch feature/gazebo into kinova-ros-beta
+
+[33mcommit 464975bebfe78994f99c91e421ace0af3ac04fb5[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Mar 12 23:31:49 2017 -0400
+
+    Changed control parameters to make the robot more stiff
+    
+    Changed control parameters to make the robot more stiff
+
+[33mcommit bf6425c94db56ee65ed9a764ef2164a5b306088f[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Mar 9 00:56:42 2017 -0500
+
+    Added world frame to urdf for gazebo
+    
+    Added world frame to urdf for gazebo
+
+[33mcommit 7de00c29994a5ab13bbff5c8ddc8aaa4dcded5e1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Mar 9 00:30:53 2017 -0500
+
+    MoveIt robot_config update for 3 robots for gazebo demo
+    
+    MoveIt robot_config update for 3 robots for gazebo demo
+
+[33mcommit 7ba4cd9d388d1d772cf0eca322d18182cde83fa3[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Mar 9 00:30:02 2017 -0500
+
+    Added gazebo parameters to all robots
+    
+    Added gazebo parameters to all robots
+
+[33mcommit fba85256482164e93f9d2c9de36b58e7875aeedf[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 8 13:30:15 2017 -0500
+
+    Add trajectory controllers for all robots
+    
+    Add trajectory controllers for all robots
+
+[33mcommit 0ae712592f1beb9f32537d8bc1d7e7e126b66ad3[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 8 10:27:13 2017 -0500
+
+    Added output or following errors for tests
+    
+    Added output or following errors for tests
+    robot_launch cleanup
+
+[33mcommit 8dcfc79b15fe48f803926a527f0f531884e5d682[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Mar 8 10:25:53 2017 -0500
+
+    Cleanup/Added parameters to launch flies
+    
+    Moved rqt launch to kinova_control
+    Added conditional parameters to launch files
+    added script to move robot in trajectory
+
+[33mcommit 28e9ea0418910199c78994d9db8cfa0b1b7fee60[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Mar 7 16:03:11 2017 -0500
+
+    joint_state/effort now publishes correct torque
+    
+    joint_state/effort now publishes correct torque
+
+[33mcommit dc3fd2891f1b08217e1b7820dc27ba0414967bbd[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Mar 7 10:40:12 2017 -0500
+
+    major fix mico forearm link in urdf
+    
+    major fix mico forearm link in urdf - had the jaco forearm link instead of mico
+
+[33mcommit 7a98d80f545a36fc51390bc8e459d8fa7c280aad[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Mar 2 13:34:33 2017 -0500
+
+    bugfix use_estimated_gravity inside kinovaComm
+    
+    bugfix use_estimated_gravity inside kinovaComm
+
+[33mcommit 05a81d4bf2b302daa6b92ec788738f9c96addcd7[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 1 14:09:59 2017 -0500
+
+    Revert "Fix for setting setting COM parameters"
+    
+    This reverts commit 60bb1f06394a5da3496d42f28e4673aa7130093e.
+
+[33mcommit eb22d0f0dc82c0d9ff8f7ada0a28f979b3834f8c[m
+Author: Pretendprof <lambmi@mail.uc.edu>
+Date:   Tue Feb 28 09:49:14 2017 -0500
+
+    addCartesianPoseToTrajectory correction (#87)
+    
+    * addCartesianPoseToTrajectory correction
+    
+    Corrected pose request and response variables, they were all the same.
+
+[33mcommit 1699f318a7591fda0fd66b233531f83941431c8e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Feb 26 01:50:38 2017 -0500
+
+    Changes in robot configs for jaco for gazrbo
+    
+    Changes in robot configs for jaco for gazrbo
+
+[33mcommit 8e8353eee9a036d93e5f6b912c7c465e74275bd0[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Feb 26 01:49:57 2017 -0500
+
+    Added ros_control trajectory controller
+    
+    Added ros_control trajectory controller
+
+[33mcommit 35121a2c54165afdfa4b13578694f0ff418847aa[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Feb 21 09:32:11 2017 -0500
+
+    Added joint trajectory controller from ros_control
+    
+    Added  joint trajectory controller from ros_control
+    ros_controller ns changed to robot prefix
+    updated joint max effort value
+    MoveIt - added demo file to launch ros_control controller
+
+[33mcommit 2308cd39272c838e5b21ee6b04b3a236c8e2cf0f[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Feb 14 17:12:21 2017 -0500
+
+    Added inertia parameters for 7dof robot
+    
+    Added inertia parameters for 7dof robot
+    Fixed finger mesh model number
+
+[33mcommit 0296c917c0410ca3ce70a26427389f21a8cced0c[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Feb 13 17:49:20 2017 -0500
+
+    Added correct inertial parameters
+    
+    Added correct inertial parameters
+
+[33mcommit 568605bb7bddb568a10a68c6cc46fb2e1eabde82[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Feb 13 17:48:58 2017 -0500
+
+    Added damping to joint
+    
+    Added damping to joint
+
+[33mcommit ad77a99c139a9896aa301a3f497564c5c52fbc22[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 8 00:35:09 2017 -0500
+
+    Setup gazebo files for 7 dof and mico
+    
+    Added inertial parameters to urdf
+    Created poisition controller configs
+    Added finger controllers
+
+[33mcommit 21434b2ea4100b7406acc575c07001a5b06c411c[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Feb 3 13:52:31 2017 -0500
+
+    Added controller config files
+    
+    Added generate_controller_config.py to generate control yaml files
+    Generated j2n6s300_control added
+
+[33mcommit 52a7932aa272a2783495b5e9667fe72c362d9e20[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Feb 3 13:51:22 2017 -0500
+
+    Added support for gazebo in urdf
+    
+    Added support for gazebo in urdf
+    Modified j2n6s300.xacro to support Gazebo
+
+[33mcommit 5ce876c67588e701089a97bc6ecbb13b4ff395c3[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Feb 3 13:48:05 2017 -0500
+
+    Created package kinova_gazebo and kinova_control
+    
+    Created package kinova_gazebo and kinova_control with default files from Gazebo tutorials
+
+[33mcommit 75ce8497c7a80b3ae49ba07c67ba99e1b655e299[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 17:36:31 2017 -0500
+
+    trajectory controller adjusted for 7 joints
+    
+    trajectory controller adjusted for 7 joints
+
+[33mcommit dcbb982dd4fc78f50b31962d7519d378196d86da[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 15:28:14 2017 -0500
+
+    Updated readme to add robot_serial info
+    
+    Updated readme to add robot_serial info
+
+[33mcommit 4797c83ea1ef139d6641620b494368d0eff656f1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 15:15:31 2017 -0500
+
+    Fix for displaying readme
+    
+    Fix for displaying readme
+
+[33mcommit a420e0d26c71ef24fdc07f72305212e485d89a20[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 15:03:30 2017 -0500
+
+    Readme still uses 1.1 fixed
+    
+    Readme still uses 1.1 fixed
+
+[33mcommit bc5af81cff475c95418116de4c20ade4f783822c[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 15:01:10 2017 -0500
+
+    Changed version number to 1.2
+    
+    Changed version number to 1.2
+
+[33mcommit a849522328e192b312ec40cfb28feb6441392c0a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 14:45:51 2017 -0500
+
+    Fixed underscore in naming joints
+    
+    Updated readme
+    Fixed underscore in naming joints
+
+[33mcommit 4d393ba532eb8acb6fc3539a8fa854ea34e3d5c3[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 13:23:22 2017 -0500
+
+    Trajectory controllers for individual robots run in indivisual scope
+    
+    Joint trajectory following and gripper action servers have robot name in node name
+    All topics are given scope names matching the robot names to allow multiple instances
+
+[33mcommit 5ef302723a46aecfc91e6b7ff555a683959dbc2c[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Feb 2 01:10:45 2017 -0500
+
+    Restructured all urdf files to allow custom prefix
+    
+    Restructured all urdf files to allow custom prefix
+    Added two robot urdf example
+
+[33mcommit 6e78744d5e602decdf82b9d24cd5a6fb37f90e1d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 1 14:17:06 2017 -0500
+
+    Changed urdf files to allow custom prefix to be added
+    
+    Changed urdf files to allow custom prefix to be added
+    Added structure to be able to control multiple robots from 1 node
+
+[33mcommit 60bb1f06394a5da3496d42f28e4673aa7130093e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 1 14:09:59 2017 -0500
+
+    Fix for setting setting COM parameters
+    
+    Added different sizes for arrays for setting COM parameters
+
+[33mcommit 2dce460d9ae46e5a635ae8a1deb6a2ff4a20adba[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 1 11:32:15 2017 -0500
+
+    All assistive models deleted
+    
+    All assistive models deleted - not needed, model is same as service
+
+[33mcommit 1769d85ed45716b1eeb3df5e54b82a6328a5f1e6[m
+Merge: ab322cd 0c17944
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Feb 1 09:16:14 2017 -0500
+
+    Merge branch 'support7dof'
+    
+    Conflicts:
+            kinova_bringup/launch/kinova_robot.launch
+
+[33mcommit ab322cd51ec8ce25f50dac78fca473c184a5b321[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Jan 31 19:01:27 2017 -0500
+
+    Added features to pick place
+    
+    Added target cylinder
+    Added complex obstacles
+    Added orientation contraint example
+
+[33mcommit e752e1409aaf203262e9e9fb77e60d265284b3de[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Jan 31 17:10:20 2017 -0500
+
+    added IKFast source files
+    
+    added IKFast source files
+    added pictures for readme
+
+[33mcommit 38120bfb9f9c186822db3b69ae2cf474f1d0324a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Jan 31 13:16:22 2017 -0500
+
+    Added read me for MoveIt!
+    
+    Added read me for MoveIt!
+    Added note to read me for kinova_driver
+
+[33mcommit 91617da63c54c9a8960f4c9a35c1cf04a64b0323[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 26 13:51:28 2017 -0500
+
+    Trac_IK uses param manip2 for all robots
+    
+    Trac_IK uses param manip2 for all robots
+    Changed gripped close pose to avoid collision between links
+
+[33mcommit 70e38ee8f353608bebd23ac320524ac88a014b7f[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 26 12:29:07 2017 -0500
+
+    Added home position for 7 dof robot
+    
+    Added home position for 7 dof robot
+
+[33mcommit 8d8e26b2fa82dcb03d321b5a8d7b030d0dcd1374[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 26 11:36:08 2017 -0500
+
+    Update demo to launch trajectory follwer from kinova_driver
+    
+    Update demo to launch trajectory follwer from kinova_driver
+
+[33mcommit df69919c79b8991e2df7dbbe4a533b671bf21a99[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Jan 25 14:11:26 2017 -0500
+
+    joint_trajectory_action_sever moved from moveit to kinova_driver
+    
+    joint_trajectory_action_sever moved from moveit to kinova_driver
+    moveit_motion_plan renamed to kinova_arm_moveit_demo
+
+[33mcommit 0c1794454c3c9f9757c24c73e8bcd7ccf33b2773[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Jan 25 10:48:59 2017 -0500
+
+    Added ability to give names to robot driver nodes
+    
+    Added ability to give names to robot driver nodes
+
+[33mcommit f014f5ef44d0048959508924e367c95c6fd89ea5[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Jan 23 17:28:45 2017 -0500
+
+    Bugfix reading use_estimated_COM parameter
+    
+    Bugfix reading use_estimated_COM parameter
+
+[33mcommit f94ac920dab0ceb3922a59789ae1b15aed85742a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 19 17:43:08 2017 -0500
+
+    Changed continous joint to revolute for joints 2 and 3
+    
+    Changed continous joint to revolute for joints 2 and 3 - this was an issue for ros_control
+
+[33mcommit 2acae8bfb36dc1370d1dcb31c8758b70f86e6d9a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 19 17:15:24 2017 -0500
+
+    Deault kinematics set to trac_ik
+    
+    Deault kinematics set to trac_ik for all three robots
+    solve_type parameter added
+
+[33mcommit ce77bcae448c10da095313158f13827599626fd4[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Jan 17 11:23:18 2017 -0500
+
+    pick and place demo does not look for gripper client in virtual run
+    
+    parameter added to indicate if robot is connected
+    If robot is not connected gripper action client is not called
+
+[33mcommit e25989e581931f552960e246527fba21b4314418[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Jan 17 10:27:48 2017 -0500
+
+    Set initial state of moveit virtual robot
+    
+    Renamed virtual robot launch file to match in all 3 robots
+    Set initial state of moveit virtual robot in launch file
+    Added initial state in fake_controller odesn't seem to work
+
+[33mcommit d04a51c79452009d244bc573eca66eac7057d172[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Jan 16 15:24:28 2017 -0500
+
+    Fixed initial state of robot
+    
+    Fixed initial state of robot to one that is not in collision
+
+[33mcommit 79e4e1a2b090649178114ead2225f6660b31ddb1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Jan 16 09:29:32 2017 -0500
+
+    Force control Ethernet test added
+    
+    Readme updated with instructions for Ethernet connection
+    Test added for force control
+    Small bugfix for Force Control
+
+[33mcommit 6dee12828257345410354f13b650358ca1a32722[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 12 14:09:56 2017 -0500
+
+    Trajectory controller made to use robot_type parameter
+    
+    Trajectory controller made to use robot_type parameter instead of node namespace
+
+[33mcommit 27f0539452690e59120c60f1d1720d212fd3588d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 12 13:54:13 2017 -0500
+
+    Fixed config files to get pick place demo working for all 3 robots
+    
+    TrajectoryController, pickplace made generic
+    Robot config modified to make them work with pick place demo
+
+[33mcommit 950d75b4d2f4b84e0a8387a32d66a230ffa9fdb3[m
+Merge: 2c9600b e5be3d4
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 5 12:47:14 2017 -0500
+
+    Merged branch support7dof into feature/moveit
+
+[33mcommit e5be3d4c5f3bcac82168f25e6d98a73f3c9f2ca1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 5 11:50:14 2017 -0500
+
+    Torque control fix
+    
+    Needed to initialize array to zeros to fix torque control with Ethernet
+
+[33mcommit 2c9600bf6940cb5f58e68146cb803c1b71eb87e7[m
+Merge: 14b3fe9 67973b3
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Jan 5 11:10:52 2017 -0500
+
+    Merged branch support7dof into feature/moveit
+
+[33mcommit 67973b36ff049e33ac74dc5bab9a421f19493fa1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Jan 4 23:02:11 2017 -0500
+
+    Updated API files
+    
+    Updated Kinova API files
+    Added Exceptions to new functions
+
+[33mcommit 14b3fe97ca127bac7c569722e752aa506cccd8a7[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Jan 4 22:33:26 2017 -0500
+
+    Added moveit files
+    
+    Added MoveIt configs for Jaco, Mico, 7 dof
+    Added IKFast plugins
+    Added Existing MoveIt demo files
+
+[33mcommit 467e322ac8be35bde7aa15ace6b613728eef66d1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Dec 20 23:48:30 2016 -0500
+
+    Separated common functions in robot_control_modules.py
+    
+    Separated common functions in robot_control_modules.py
+
+[33mcommit 11c29a9b4aea8373185bc8f6eabfcab8685358a3[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Dec 14 00:41:25 2016 -0500
+
+    Added service to run COM estimation sequence
+    
+    Added service to run COM estimation sequence
+
+[33mcommit 01034fa9ff0e305ac3ae7d92541470f7f62395e8[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Dec 12 00:14:04 2016 -0500
+
+    Added option to publish gravity comp torques
+    
+    Added option to publish gravity comp torques
+
+[33mcommit 3cb5f52014bcb7ef00b0476e2149f44f6f760dcf[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Dec 11 01:26:36 2016 -0500
+
+    Added torque_compensated_mode
+    
+    Added torque_compensated_mode
+    Added test for zero torque service
+    kinova_comm - added logging statements
+    kinova_arm - bug fixes
+
+[33mcommit ecb478345a81df4b00dff87b0cb68fb0d4ac832e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 8 13:18:03 2016 -0500
+
+    Torque publisher added
+    
+    Torque publisher added
+
+[33mcommit f2b8b774284aa9f97f9a940e47ee8ca5f1eee18b[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 8 00:29:38 2016 -0500
+
+    Added service to add Pose to Cartesian Trajectory
+    
+    Added service to add Pose to Cartesian Trajectory
+    This is useful when commanding multiple Cartesian waypoints
+
+[33mcommit 60977b1853c98b7667d8ebf0b3d3cc5b37c95a2d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Dec 7 23:37:27 2016 -0500
+
+    Reseting default to clear trajectory
+    
+    Reseting default to clear trajectory, actionlib set goal will use the default as it does now since it takes only one goal
+    A separate service is added to add cartesian goals without clearing prev trajectories
+
+[33mcommit 5dd8c090f4ad6de05b2b6fffd5b84ef69c7016a0[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Dec 7 11:40:39 2016 -0500
+
+    Added cartesian force command subscriber
+    
+    Added cartesian force command subscriber
+
+[33mcommit 9d4e4494c8fe5246ce129eb7499e2ee5961201ac[m
+Author: Unknown <soli@kinova.ca>
+Date:   Tue Dec 6 12:50:33 2016 -0500
+
+    Update readme
+    
+    Update readme.
+
+[33mcommit 42f988289b201737cb821cd5d9ecc19f7e93f81d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Dec 4 13:34:54 2016 -0500
+
+    Added COM parameters to torque parameters
+    
+    COM parameters can be set using the torque parameters in the config file
+
+[33mcommit fc46aac6bbdf74a0f1f445ec407676af9f9c0b9e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Dec 4 10:15:36 2016 -0500
+
+    Add joint trajectory does not clear trajectories by default
+    
+    Add joint trajectory does not clear trajectories by default
+
+[33mcommit 53ac79dea19a4a28e32516539228f1913e949c00[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sun Dec 4 10:12:04 2016 -0500
+
+    Service added to set zero torque
+    
+    Service added to set zero torque
+
+[33mcommit be119a652492a4f7dd0130d641a29e45a67110b8[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sat Dec 3 17:51:32 2016 -0500
+
+    Added service to clear trajectories
+    
+    Added service to clear trajectories
+
+[33mcommit 598a2b6eb74291b517614dbc7bf313f93dd54262[m
+Author: Unknown <soli@kinova.ca>
+Date:   Sat Dec 3 17:29:16 2016 -0500
+
+    Setting new Pose command does not clear trajectories
+    
+    Default value of push set to false so that setting new Pose command does not clear previoustrajectories
+
+[33mcommit ee6a8b567826ee297105bf76efed0c4e0b954a1e[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 13:47:52 2016 -0500
+
+    Fixed error msg in Action Server
+    
+    In case robot is stalled, action sever is aborted instead of prempted
+
+[33mcommit e72f5cac27fe2bf11784f5188962b23084f745e9[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:18:04 2016 -0500
+
+    Added service to set torque parameters
+    
+    Added service to set torque parameters
+
+[33mcommit 9c6cb9de04ea2d5a3626a990c3f0bbb6b1f4d8cf[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:17:26 2016 -0500
+
+    Added Ethernet lib files
+    
+    Added Ethernet lib files
+
+[33mcommit a6d61458214f743d1548fa583f9057b07df2eb0c[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:16:34 2016 -0500
+
+    Added support for initializing ethernet
+    
+    Added support for initializing ethernet
+
+[33mcommit 955e100d89e4c71ab03d0aff9f0ef2c899c71a9a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:15:34 2016 -0500
+
+    Removed check for robotType in quickStatus
+    
+    Removed check for robotType in quickStatus
+    number of fingers and joints set by caller class
+
+[33mcommit 7cf082fd6d4d548230fe2bcf88da85a49bc4c3c5[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:12:10 2016 -0500
+
+    Added torque control functions to kinovaComm
+    
+    Added torque control functions
+    Re-arranged fuctions for better reading
+
+[33mcommit 0a69c455d6ffee4e79e6d511271e1f79a1a6d798[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:09:13 2016 -0500
+
+    Added Ethernet functions
+    
+    Added Ethernet functions
+
+[33mcommit c075118f07ca5bf63f270e95a8d9572b713fc6d1[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 12:07:58 2016 -0500
+
+    Removed redefination of library address
+    
+    Removed redefination of library address to avoid warnings at build time
+
+[33mcommit 160661feaa6901b808362163391579084da4eb4d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 11:51:26 2016 -0500
+
+    Added ethernet parameters
+    
+    Added ethernet parameters
+    Fixed Torque MinMax parameters
+
+[33mcommit 3848a585fae9f57b0d9ea22b7cd05cd4189d5b70[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Dec 1 11:50:18 2016 -0500
+
+    Added ethernet API headers
+    
+    Added ethernet API headers
+
+[33mcommit 66b5a0ed3c9ba1df68f479623dc309bf14779da9[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Nov 25 16:53:15 2016 -0500
+
+    Added ethernet API support
+    
+    Added check for USB connection
+    Added chech for Ethernet connection
+    Added ethernet API support
+
+[33mcommit 569e6766b867aa53e685b8097be967e3107f298f[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 16 14:46:19 2016 -0500
+
+    Made test script interative
+    
+    Made test script interative to avoid surprise movement of the arm
+
+[33mcommit 63aff288de14bcc06a6b5050d4db89cbe76aec77[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 16 13:12:30 2016 -0500
+
+    Added notes on 7 dof robot control
+    
+    Added notes on 7 dof robot control
+
+[33mcommit 3da4fb245e34a1359a3ddc0733701dda3ccfc471[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 16 13:11:54 2016 -0500
+
+    Added service to set torque parameters
+    
+    Added service to add torque parameters
+    Added function to setgravityPayload
+    Added function to setTorqueSafetyFactor
+
+[33mcommit 0569f21be6a2d43fe388e5806dc76fa9a261f495[m
+Author: Unknown <soli@kinova.ca>
+Date:   Mon Nov 14 12:03:47 2016 -0500
+
+    Rebuilt USBCommandLayerUbuntu.so
+    
+    Changed the USBCommLayer path in USBCommandLayer.h from './USBCommLayer.so' to 'USBCommLayer.so'
+
+[33mcommit 9dbec5e2b7a2534fdc986ecc57c4cf35099df871[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 9 11:19:17 2016 -0500
+
+    Updated testActionSvr to add Torque and vel control
+    
+    Updated testActionSvr to add Torque and vel control
+
+[33mcommit fe0cd260f45591f25db0cf4e2266b33255d664c8[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 9 11:18:32 2016 -0500
+
+    Added torque control subscriber
+    
+    Added torque control subscriber on message jointTorque
+    Added service to switch between Torque mode and Position mode
+
+[33mcommit 989d76fbac85581ab0a30decd7e3278eb555eb63[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Nov 4 17:22:35 2016 -0400
+
+    Added service to enable,disable null space mode
+    
+    Added service to enable,disable null space mode
+
+[33mcommit 17f829f15fa0077ea698a1d92d9864b148cf9a7b[m
+Author: Unknown <soli@kinova.ca>
+Date:   Fri Nov 4 17:21:31 2016 -0400
+
+    Added new API functions into ROS
+    
+    Added new functions in the kinova_api, kinova_comm
+
+[33mcommit 0ecf61498e603586e2fb233625ebd9d706e2d0ed[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 18:18:44 2016 -0400
+
+    Test for action servers added
+    
+    Test script for testing actionlib services added
+
+[33mcommit e668832335cae8823f07fe73108262b04052126a[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 18:17:25 2016 -0400
+
+    cleaned up install targets
+    
+    python scripts were moved to kinova_demo moved install targets in CMakeLists
+
+[33mcommit c64ed4c7c2120f338a1f7d88a9aedafcc85ad246[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 17:35:54 2016 -0400
+
+    Added ring models to 7dof model
+    
+    Added ring model parameters to kinova common
+    Defined ring parameters for 7 dof robot
+
+[33mcommit 75ca559ab5200145904c510eef6acd72f298d69b[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 14:26:46 2016 -0400
+
+    added finger position to joint_states
+    
+    Rviz was not updating finger position because they were not published to joint_states. Added. Assumed Finger position 6800 is equal to 80 deg rotation (full close position).
+
+[33mcommit c2b64e676780e1f75c24b5ba3bde06793ab9f5df[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 14:24:25 2016 -0400
+
+    Switched finger 2 and 3 model
+    
+    Visualising the gripper showed that fingers 2 and 3 models did not match with the gripper fingers. Fixed by switching models.
+
+[33mcommit 0b05dad412e181e7c59f97b36c140e66b615d44d[m
+Author: Unknown <soli@kinova.ca>
+Date:   Thu Nov 3 10:17:25 2016 -0400
+
+    Fix URDF for 7 dof robot
+    
+    Fix URDF for 7 dof robot
+
+[33mcommit 46a09d570f472f437d1d84493243ce64c9d40438[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 2 23:58:55 2016 -0400
+
+    Parameterized base_frame for tf_generator
+    
+    In case of users having Kinova robot attached to a larger system. The "root" frame was made configurable through the ros parameter server.
+
+[33mcommit 9132e00a192d6e09d27d5f0b9ae7af4cfc5a9eb7[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 2 23:16:28 2016 -0400
+
+    Add speed limit param for Joint control
+    
+    Added a yaml file for robot parameters.
+    Added joint speed limits for joint space commands.
+
+[33mcommit befc586fd817df875b1076b802afaccd53e5b2f5[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 2 21:37:29 2016 -0400
+
+    Replacing new 7dof API libraries/headers
+    
+    4 library files for USB/Ethernet added (previous 2 deleted)
+    Header files for USB updated
+    CMakeList updated
+
+[33mcommit c6024107e74a4dc8c8e4777c7f6d7ca70377559f[m
+Author: Unknown <soli@kinova.ca>
+Date:   Wed Nov 2 21:22:25 2016 -0400
+
+    Files modified to support 7 dof robot
+    
+    Files modified to support 7 dof robot.
+    Forward kinematics for the 7 dof robot added.
+
+[33mcommit 24b856ad273b071bbd909ea0e7e2c2ee397b0e1d[m[33m ([m[1;33mtag: v1.1.1[m[33m)[m
+Merge: 866f449 04f1282
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Sep 6 15:24:00 2016 -0400
+
+    Merge branch 'hotfix_finger_action_tolerance'
+    
+    Conflicts:
+            kinova_driver/src/kinova_tool_pose_action.cpp
+
+[33mcommit 866f449c21c1c9851f9b5cf5ec4b7841b2b62e5d[m
+Merge: 5728e01 c7f11d7
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Sep 6 15:20:40 2016 -0400
+
+    Merge branch 'hotfix_position_control'
+    
+    Conflicts:
+            kinova_driver/src/kinova_tool_pose_action.cpp
+
+[33mcommit c7f11d7e1967540424f225dac6a266e2a5c913ec[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Sep 6 15:18:35 2016 -0400
+
+    disable debug log in terminal
+
+[33mcommit 5728e01c1dd573009dafac4a19c5f19f212884b9[m
+Merge: 69d8952 bdc335a
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Sep 6 15:11:47 2016 -0400
+
+    Merge branch 'hotfix_include_headfile'
+
+[33mcommit 04f12820510d0bfce9d5c8464b3162ee3dd77941[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Aug 23 10:59:54 2016 -0400
+
+    fix finger action goal preempt by tolerance
+
+[33mcommit 9580c9288ef7d04287edcae2855ccce7b1533e92[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Aug 18 11:37:44 2016 -0400
+
+    add debug tag and change tolerance
+
+[33mcommit 7af4f59e95b8e8dd0f17953af93672e085a142cc[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Aug 18 09:22:08 2016 -0400
+
+    fix_position_control_actionlib_intermittent_stop
+
+[33mcommit bdc335af8240d22304953c637a7ba0afda85eec8[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Aug 10 10:23:58 2016 -0400
+
+    delete redundant include in kinova_driver source
+
+[33mcommit 69d8952eb81f459e6fec1eff43615c62a54dd6d0[m[33m ([m[1;33mtag: v1.1.0[m[33m)[m
+Merge: d9e03b7 4014182
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jul 15 11:58:00 2016 -0400
+
+    Merge branch 'add_release_comment'
+
+[33mcommit 4014182b4b559619a1a4b22b20f3166e288b2e73[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jul 15 11:57:31 2016 -0400
+
+    add comments for previous release
+
+[33mcommit d9e03b77485ab7b8d1254f5c59b0acc825878251[m
+Merge: 10b2e6a e7f3bb1
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jul 15 11:18:01 2016 -0400
+
+    Merge branch 'release-1.1.0'
+    
+    Conflicts:
+            README.md
+            jaco_model/meshes/finger_distal_limb_1.dae
+            jaco_model/meshes/finger_distal_limb_2.dae
+            jaco_model/meshes/finger_proximal_limb_1.dae
+            jaco_model/meshes/finger_proximal_limb_2.dae
+            jaco_model/meshes/mico_link_1.dae
+            jaco_model/meshes/mico_link_2.dae
+            jaco_model/meshes/mico_link_3.dae
+            jaco_model/meshes/mico_link_4.dae
+            jaco_model/meshes/mico_link_5.dae
+            jaco_model/meshes/mico_link_base.dae
+            jaco_model/meshes/mico_link_hand.dae
+            jaco_model/urdf/jaco_arm.xacro
+            jaco_model/urdf/jaco_common.xacro
+            jaco_model/urdf/mico_arm.xacro
+
+[33mcommit e7f3bb1887a1654364c710d0dccf58f390b63c78[m
+Merge: 0399144 30091e3
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 17:23:49 2016 -0400
+
+    Merge branch 'develop' into release-1.1.0
+
+[33mcommit 30091e33ca6862eee54e566c3c5fc2218830d07c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 17:23:13 2016 -0400
+
+    Add Cartesian interactive control in README.md
+
+[33mcommit 0399144574346ccac3d266a9873e468f27955f09[m
+Merge: d63a3fb 16f2237
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 17:17:58 2016 -0400
+
+    Merge branch 'develop' into release-1.1.0
+
+[33mcommit 16f2237b17eb772a56f6b7f5f06025639d85c9a1[m
+Merge: dc86799 841d216
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 17:17:04 2016 -0400
+
+    Merge branch 'interactiveMarker_cartesian' into develop
+
+[33mcommit 841d216dc1d99a5430877d101b1ceca98e1e5d56[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 17:16:09 2016 -0400
+
+    Cartestian interactive control for other robot types
+
+[33mcommit d63a3fb5e0623cfa2616dbdf781fdab514d20c5c[m
+Merge: 3b2a579 dc86799
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 15:56:58 2016 -0400
+
+    Merge branch 'develop' into release-1.1.0
+
+[33mcommit dc867997905db2b80916913a1ec42bf5b55ebf5f[m
+Merge: 463b70c 9526ad7
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 15:53:51 2016 -0400
+
+    Merge branch 'fix_ArmDrop_interactiveControl' into develop
+
+[33mcommit 791295cd0845281116eb1f11973d32dcf4e2964b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 15:39:53 2016 -0400
+
+    Cartesian control for j2n6
+    
+    The marker pose is hard coded to j2n6's home position. Not able to read current
+    position before create the marker yet. If this is solved, can easily adapted to
+    other robots
+
+[33mcommit 9526ad705077dd8665c352b1446502a29f98ef0d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 13:18:40 2016 -0400
+
+    fix bug for pose_actionlib: relative quaternion
+
+[33mcommit 7af7d6a87b99ab1b59f678883c1d793a5eaae3c4[m
+Merge: 2bdc8ab 7553a12
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 10:59:26 2016 -0400
+
+    Merge branch 'armDrop_jointInteractive' into interactiveMarker_cartesian
+
+[33mcommit 463b70ca96fdd59ee4cf1ad18764139d5a2a874c[m
+Merge: 4efc0b3 7553a12
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 10:59:00 2016 -0400
+
+    Merge branch 'armDrop_jointInteractive' into develop
+
+[33mcommit 7553a12b68b5a6d75b0361c2728ea557747696ea[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 10:51:31 2016 -0400
+
+    Fix arm drop in joint interactive control
+
+[33mcommit 2bdc8ab69edae7ef21c3cfd42a7f02508f20327b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 27 10:08:01 2016 -0400
+
+    add interactive control for Cartesian
+
+[33mcommit 4efc0b37b005dfa25a1453be2acd909ccb561570[m
+Merge: 45b84df 3b2a579
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 17:02:55 2016 -0400
+
+    Merge branch 'release-1.1.0' into develop
+
+[33mcommit 3b2a5797e920ca52f54dd4c9c01a47768a5545d5[m
+Merge: 389638b c0659b1
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 17:02:21 2016 -0400
+
+    Merge branch 'issue5' into release-1.1.0
+
+[33mcommit c0659b164cb3c321c30b292c399e3e06e4242520[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 17:02:03 2016 -0400
+
+    remove debug codes
+
+[33mcommit 60ed1f7d7b1ba042bc702472632b757eed0ffc7a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 16:03:41 2016 -0400
+
+    Fix arm drop in finger command
+
+[33mcommit ae33ef924f8aad0add4f671b61a4c2970575d037[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 15:52:11 2016 -0400
+
+    Fix arm drop when sending joint/cartesian command sent
+    
+    The drop is related with the gravity. When an actuator bear more gravity
+    (horizontal), it drops more. While in 180 position, no drop for all actuators.
+    This happens only in the relative motion for joint/cartesian motion. The problem
+    can be solved by reading AngularCommand or CartesianCommand as current position,
+    rather than reading getAngularPose or getCartesianPose
+
+[33mcommit 389638bbfa9038eb1f32ab1330af0cee226da62c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 23 10:08:36 2016 -0400
+
+    Delete docs for Kinova C++ API and modify README.md
+
+[33mcommit 45b84dfef02e76296617a2d83d9b3ea3efe6e941[m
+Merge: 69bd862 a0d3703
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 14 11:09:31 2016 -0400
+
+    Merge branch 'release-1.0.1' into develop
+
+[33mcommit a0d3703c5e9fc85e483481b2a5898a6d6e9a1a2f[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 14 11:08:51 2016 -0400
+
+    Notes on publish frequency on velocity control
+
+[33mcommit 69bd8629fa138ea19c92d1454fad1900d623cbf0[m
+Merge: 6d831b7 e5c8e97
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 14 10:55:27 2016 -0400
+
+    Merge branch 'release-1.0.1' into develop
+
+[33mcommit e5c8e974028c3f589e000b3cd874b05c0a52ee19[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 14 08:47:37 2016 -0400
+
+    Add dependency for kinova_interactive_control
+    
+    Without add_dependancies(...), the catkin_make will fail the first time and give
+    error information that cannot some header files for messanges.
+
+[33mcommit 6d831b7114074001d8441a4c6f06a99dd28a048b[m
+Merge: f715b0d 3e1d30f
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 9 10:53:46 2016 -0400
+
+    Merge branch 'release-1.0.1' into develop
+
+[33mcommit 3e1d30f079d12bf9de9bda700433a0cd05c52973[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 9 10:51:16 2016 -0400
+
+    Add library to CMakeLists.txt -- Adrian
+
+[33mcommit b0d5e5dff5773e84dd70f20ba173caf53699af90[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 9 10:47:11 2016 -0400
+
+    Typing mistake fix. -- Andrian
+
+[33mcommit f715b0dcb745ea966dc52bcf8c9c639632cfaf64[m
+Merge: 05e61f9 79f8bca
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 8 08:43:26 2016 -0400
+
+    Merge branch 'add_interactive_to_README' into develop
+
+[33mcommit 79f8bca2c3867bd40e63a31ebd38c083153f0d0e[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 8 08:42:10 2016 -0400
+
+    Add instruction of interactive joint control to README.md
+
+[33mcommit 05e61f94cde918d8ffa5d61265b7abcc31ebbeb5[m
+Merge: c887594 a798b5f
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 16:16:35 2016 -0400
+
+    Merge branch 'fix_quickclean' into develop
+
+[33mcommit a798b5fe0aceb6e754dc0b5668fedac5c647d05d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 16:14:50 2016 -0400
+
+    clear Cartesian position print in start
+
+[33mcommit ff38b6e19f906396916f1629656a78c91d553010[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 16:08:38 2016 -0400
+
+    delete unused goal_generator
+
+[33mcommit c887594c68688dba7df5c2c42fcb8d29558273af[m
+Merge: 60e9570 83caf6b
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 16:05:51 2016 -0400
+
+    Merge branch 'interactive_joint_control' into develop
+
+[33mcommit 83caf6b9f47f9cf0c6e8e16e5e066e17010a2431[m
+Merge: a022442 5fed83e
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 13:36:29 2016 -0400
+
+    Merge branch 'fix_4DOF_joint_state' and tested interactive joint control
+
+[33mcommit 5fed83e9901fecf5e21b8c9349b1ca646f7e0154[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 13:28:51 2016 -0400
+
+    joint state length depending on arm_joint_number and finger_number
+
+[33mcommit a022442b77c168da2b6641cedff91fd3b7fe0be7[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 09:19:46 2016 -0400
+
+    manually merge branch interactive_marker f3002b7
+
+[33mcommit 60e95700220422266cee0585cb732084c9802290[m
+Merge: 84f2e59 774e7d2
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 08:45:45 2016 -0400
+
+    Merge branch 'prepare_release' into develop
+
+[33mcommit 774e7d24cafb24bcadf1f6d41944dce905894bc1[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 08:28:17 2016 -0400
+
+    Clear files not used anymore
+
+[33mcommit 3344b380eba05a7c5e0c848c8765969d5021eb90[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 08:24:40 2016 -0400
+
+    add reference html files to kinova_docs
+
+[33mcommit cc823216f0e4ecc2d5b729d9735664405202a180[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Jun 7 08:21:17 2016 -0400
+
+    relocate kinova_robot.launch to bringup, default use_urdf
+
+[33mcommit 28f048b3142f1fb3743b70cb7cb973fa9edaa798[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 6 16:20:20 2016 -0400
+
+    Prepare README.md for the release
+
+[33mcommit 84f2e59ffd7ca880446fcebc45813765d3e81949[m
+Merge: 00c42ae 4bb12ab
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Jun 6 09:27:47 2016 -0400
+
+    Merge branch 'kinematic' into develop
+
+[33mcommit 4bb12aba9597c09455f6403d12212a3f7f1ba03b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jun 3 15:40:01 2016 -0400
+
+    Shorter output of joints_actionlib for mico 4DOF
+
+[33mcommit bec09044b7c973a604fb4c22068e0b239fa4783b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jun 3 14:13:12 2016 -0400
+
+    Mico may have 3-finger
+    
+     Please enter the commit message for your changes. Lines starting
+     with '#' will be ignored, and an empty message aborts the commit.
+     On branch kinematic
+     Changes to be committed:
+            new file:   kinova_description/urdf/m1n6a300.xacro
+            new file:   kinova_description/urdf/m1n6a300_standalone.xacro
+            new file:   kinova_description/urdf/m1n6s300.xacro
+            new file:   kinova_description/urdf/m1n6s300_standalone.xacro
+            modified:   kinova_driver/src/kinova_comm.cpp
+
+[33mcommit 45ba3ad3d70f3b1efa545d4b7d3c473475d7e777[m
+Merge: 61412a2 2477f39
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jun 3 10:14:24 2016 -0400
+
+    Merge branch 'JointAngles_4DOF' into kinematic
+
+[33mcommit 2477f392c6643c463901e7d88ff7fa3c364a85d7[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Jun 3 09:02:26 2016 -0400
+
+    Adapt 4DOF for publish jointstate and action_client
+
+[33mcommit 61412a25edc11a319089df76fbc3b66aab36c256[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 2 15:24:50 2016 -0400
+
+    Correct offset between DH_theta and Algo_q for j2s6
+
+[33mcommit 88ca45adc3f26ce36cf521496d26d6aff9457e7c[m
+Merge: 720ef44 498b5bc
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 2 13:45:23 2016 -0400
+
+    Merge branch 'correct_j2s6_typo' into kinematic
+
+[33mcommit 498b5bc424f59ffe85cbf2b6bd910bbdec28025b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 2 13:43:13 2016 -0400
+
+    Correct typo for "j2s6a300" and "j2s6s300"
+
+[33mcommit 720ef44206077880e2d0e93db3b684430ec4c31a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Jun 2 12:48:33 2016 -0400
+
+    Add RobotType = 7(JACO2 6DOF) to KinovaComm
+
+[33mcommit edca050e7af513d789b7313a35405aa9b33fdeab[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 16:19:27 2016 -0400
+
+    revert sign of e2 and rename root frame
+
+[33mcommit 688851c85c9bf1531458108294807832d038cbe8[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 16:15:34 2016 -0400
+
+    kinematic solution for spherical 6DOF
+
+[33mcommit 56fe8185d9b9924405182e33e3a7803893198b8e[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 15:31:12 2016 -0400
+
+    kinematic solution for j2n4 and m1n4
+
+[33mcommit ba5faa1784c11f0624f231e4eacae1c9317c1fe7[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 14:51:46 2016 -0400
+
+    adapt m1n6 to j2n6
+
+[33mcommit 1292934f502753015c56449e74c65ae2df623ef5[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 14:27:20 2016 -0400
+
+    move j2n6... configuration to kinova_robotType block
+
+[33mcommit 33553f45c17d98aa230b22908f36883397a7a869[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Jun 1 10:43:57 2016 -0400
+
+    Kinematic solution for j2n6a300
+
+[33mcommit 853df74a36e99f56ba2ecf89c9e49300f3adf897[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 31 14:49:21 2016 -0400
+
+    kinematic works for kinova_robot.launch -- > kinova_tf_updater
+    
+    if use_ufdf:=false, kinova_robot.launch calls kinova_tf_updater node, which in
+    turns calls kinematic function.
+
+[33mcommit 00c42ae82f50a2fb6691f3b86259c4075c3e1621[m
+Merge: 12bcf83 08c2801
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 25 08:51:12 2016 -0400
+
+    Merge branch 'move_URDF' into develop
+
+[33mcommit 08c2801fc3389beb94eb4e01d7827ce9a2103b8e[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 25 08:49:59 2016 -0400
+
+    delete old urdf files in last release
+
+[33mcommit b190ab88c906dbfa23623af2b320711325d4be35[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 25 08:46:40 2016 -0400
+
+    delete files with short kinova_robotType format
+    
+    In previous format, m1n4_2 represents m1n4a200 and m1n4s200. Now complete
+    kinova_robotType format is used.
+
+[33mcommit 25e623c529f3c06802737817d5e8001eca0d5659[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 25 08:44:54 2016 -0400
+
+    display j2n4, m1n4 and m1n6
+
+[33mcommit 0fa9b5e076aedcee1be9f0bf8213f64fa1fc6a43[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 16:12:56 2016 -0400
+
+    show j2s6_3 in display_kinova_robot.launch
+
+[33mcommit fc2f39fcff7ecd0f10cca313ddd3be2dcb1cb665[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 16:03:22 2016 -0400
+
+    show j2s7_3 in display_kinova_robot.launch
+
+[33mcommit b88bfc1aa93fbacf2f3f1059753e1565d15922f4[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 15:58:57 2016 -0400
+
+    Change revoluate joint to continuous joint to avoid joint limit constrain
+
+[33mcommit 318d309d248ca3e5dd68aee832b5e8f7c310c99a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 15:40:57 2016 -0400
+
+    show j2n7_3 in kinova_robot_launch
+
+[33mcommit cb89bd7ad445881faf1f3fc3aebb0a03687579f6[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 15:31:51 2016 -0400
+
+    Display all robot types by display_kinova_robot.launch
+
+[33mcommit ec72e37ef73c12a9757fd396a138b9f04aa0410a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 14:51:13 2016 -0400
+
+    show j2n6s300 in kinova_robot.launch
+
+[33mcommit 22bd3e7971eceb7d0b18a26109b9711018edbe68[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 14:30:27 2016 -0400
+
+    Update ratio for display fingers in RViz
+    
+    The convert ratio for 3fingers are based on experiment. 2 finger hand may
+    different
+
+[33mcommit cc281a7f6d556829de9535769cef16ec11efe41c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 13:41:14 2016 -0400
+
+    Correct initial position of each link in URDF model
+
+[33mcommit 25ff82d715fa8da788267fbd13d891f1151b1aeb[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 24 12:51:59 2016 -0400
+
+    show jan6a300 in kinova_robot.launch
+
+[33mcommit 12bcf831f0c94df620e1b0c6dc2c72c09530ec15[m
+Merge: 8527139 ae0c78d
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 20 11:32:14 2016 -0400
+
+    Merge branch 'bug_velocity_input' into develop
+
+[33mcommit ae0c78de58dbf5fef4cf152acd4ab6c0298e0699[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 20 10:43:15 2016 -0400
+
+    clean up unused variables for velocity control
+
+[33mcommit c1d7444b3da36efd559f0de216f705ee6f4c107e[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 20 09:00:59 2016 -0400
+
+    CartesianPose velocity control
+    
+    unit meter per second for linear velocity, radians per second for angular twist
+    velocity.
+
+[33mcommit 061c021bc9697951f7861a84e774d04cdba8c8ca[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 19 16:01:02 2016 -0400
+
+    joint velocity works
+
+[33mcommit 8527139415078bdd22bd4934c720f525ad15453f[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 19 13:17:33 2016 -0400
+
+    change api_origin to link_base in files for new version
+    
+    api_origin remained in old files, such as some old urdf files(jaco_common.xacro,
+    jaco_arm.xacro) and test/pose_action_client.py
+
+[33mcommit 1ba56640afc876488ddf821178f66b9ffa9ffcfc[m
+Merge: 7d0c493 ca007ed
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 19 13:02:50 2016 -0400
+
+    Merge branch 'relative_motion' into develop
+
+[33mcommit ca007edf7a4361a83a034912526de279792393d1[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 19 12:46:31 2016 -0400
+
+    relative motion for pose_action_client
+
+[33mcommit be953ba246a4ae076136406547e6b6c71475efeb[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 19 10:36:16 2016 -0400
+
+    relative motion for joint_action_client
+
+[33mcommit e8a2f88a929f8b20aa523f2f8ca0cf14258fb21b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 14:21:42 2016 -0400
+
+    relative_motion_finger
+    
+    relative motion working
+
+[33mcommit 7d0c4934dcb397924941159dd4a1a3c9ef9e670a[m
+Merge: 0b45e94 1e78e0d
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 12:49:49 2016 -0400
+
+    Merge branch 'useRobotType' into develop
+
+[33mcommit 1e78e0dc30cb474a2c8986e15ad2b23ffbb4168e[m
+Merge: 236bece a9edccb
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 12:48:48 2016 -0400
+
+    Merge branch 'useRobotType_pose' into useRobotType
+
+[33mcommit a9edccb5a2fe3378f322de1815edd0bc19744d0d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 12:48:13 2016 -0400
+
+    adapt kinova_robotType into pose_action_client
+
+[33mcommit 236bece4df2260c45714b843ee4ab50e74e6b51b[m
+Merge: 3877d9c 6982845
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 12:12:52 2016 -0400
+
+    Merge branch 'useRobotType_joint' into useRobotType
+
+[33mcommit 6982845f97471cbd228f3a4241ab474c5ad26f0d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 12:11:29 2016 -0400
+
+    adapt kinova_robotType into joint_action_client
+
+[33mcommit 3877d9c1d84f7990e4ca3401b16dfe1a4f0077e4[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 11:37:18 2016 -0400
+
+    rename fingers_action_client, and clear debugs
+
+[33mcommit d8b5807d80649bcbb4e261059352adefecc59778[m
+Merge: 6bbe8c0 e399327
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 11:32:43 2016 -0400
+
+    Merge branch 'useRobotType_finger' into useRobotType
+
+[33mcommit e3993277793aa07849b84cd2b5172cf2290abe69[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 18 10:50:45 2016 -0400
+
+    Adapt robotType to fingers_action_workout.py
+
+[33mcommit 6bbe8c03f27b84f77b59b24095b5acc0e83ca5c1[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 16 15:36:29 2016 -0400
+
+    adapt kinova_robotType to kinova_robot.launch command
+    
+    roslaunch kinova_robot.launch kinova_robotType:={any kinova_robotType}
+    The command above would show correspond robot urdf model. However, the urdf
+    model in Rviz is not moving with joystick command.
+
+[33mcommit 01c9530433f788e34919425cebd9494548c6700c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 16 14:51:05 2016 -0400
+
+    adapt kinova_robotType in kinova_arm_driver.cpp
+
+[33mcommit 597db362742b2d6b997172f8b77a5a89a0815477[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 16 11:57:09 2016 -0400
+
+    correct errors in validate_kinovaRobotType()
+
+[33mcommit 6054de5cb3085e7da37913b7bd3d95273fae0523[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 16 10:45:20 2016 -0400
+
+    passing kinova_robotType to kinova::KinovaArm class
+    
+    given kinova_robotType in kinova_robot.launch, and pass it to ros nodes:
+    kinova_arm_driver. In kinova_arm, different robot types will have different
+    parameters.
+
+[33mcommit 2ab19bb28264e9f32c83c93de3ffd5ea164c48e2[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 16 09:36:57 2016 -0400
+
+    adapt urdf files with kinova_robot_type format
+    
+    An example of kinova robot type is: j2s7s300 --> jaco v2 spherical 7DOF service
+    3fingers. Service and assistive model share the same URDF model.
+
+[33mcommit 871f54e378c5dd6338f7ff786d5e72d87953c5ec[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 16:27:02 2016 -0400
+
+    correct prefix in finger_set.xacro
+
+[33mcommit 0c96f4b6da9176dbe830d2bd164bcb8a54a96ae4[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 16:03:25 2016 -0400
+
+    quick fix for pose_actionlib for jaco2
+
+[33mcommit 983b490731dd6f5ef15d2dd17ef099f0ed482bdd[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 14:15:54 2016 -0400
+
+    Validate kinovaRobotType
+    
+    RobotType contains 8 chars, and each character is chosen to present the meaning
+    of one feature of a dedicated robot. RobotType "j2s7s200" can be interpreted as:
+    jaco v2, spherical wrist, 7DOF, service robot, hand with 2-fingers.
+
+[33mcommit 0b45e945b533f542d26040845a568692011ba660[m
+Merge: 4056115 69cb869
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 11:05:33 2016 -0400
+
+    Merge branch 'feature_low_positionControl' into develop
+
+[33mcommit 405611587a4adb6bb026f89ba37ad70d7fa7e80f[m
+Merge: aea9926 9b2f722
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 11:01:35 2016 -0400
+
+    Merge branch 'feature_low_kinova_comm' into develop
+    
+    Conflicts:
+            kinova_driver/src/kinova_comm.cpp
+
+[33mcommit aea99264c4112bc7972902a687a8689c3249ceed[m
+Merge: df74a71 6b78e29
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri May 13 10:52:22 2016 -0400
+
+    Merge branch 'feature_low_HomeCustomize_VirtualJoystick' into develop
+
+[33mcommit df74a715b3f463e5bc2258735fa00ea8a8ebeb7a[m
+Merge: 725f465 752b555
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 16:11:26 2016 -0400
+
+    Merge branch 'URDF_all' into develop
+
+[33mcommit 752b55508b6842842ec718723d00a87ca8916a62[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 16:07:56 2016 -0400
+
+    Delete test codes
+
+[33mcommit 23ed3a6ca8a91c947b70b5bee56a7339a0e07c0a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 16:06:09 2016 -0400
+
+    Add finger set to all robots
+
+[33mcommit 1751214fe3932992069873145e4b3fc0672b4465[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 15:53:35 2016 -0400
+
+    2finger hand working
+
+[33mcommit 2d4d3f8cc42fba7b689a1644b8a898e46d2b0cfa[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 15:42:53 2016 -0400
+
+    3 fingers working
+
+[33mcommit f27e282f0ba984c787cae3811737730f616d0fb9[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 14:47:48 2016 -0400
+
+    3finger: first finger OK
+
+[33mcommit 434fe91ea1964ed42d418548dc2cd16cfea29f13[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 12:51:40 2016 -0400
+
+    create finger macro (finger and tip) in kinova_common
+
+[33mcommit 7c311050efe888e7dab6f00a852b275043e46015[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu May 12 11:01:06 2016 -0400
+
+    All URDF works except fingers
+
+[33mcommit c607bba8ce1ebc3070bb496ad34a859bd5440eb9[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 11 15:06:12 2016 -0400
+
+    add mesh to j2_7s_3
+
+[33mcommit 4fe32df2f26882e751dd8467c23845cbc09d2f7a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 11 15:05:25 2016 -0400
+
+    add mesh to j2_7s_3
+
+[33mcommit 3945f57382d81e123706870d81cef6b74d203b93[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 11 14:31:46 2016 -0400
+
+    j2_7s_3_standalone pass xacro generation
+    
+    parameters value have to be in the same file with macros. Seperate j2_7s_config and j2_7s_structure doesn't work.
+
+[33mcommit f0420f96135ed067e59d43f3285538afbcaf6f7b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 11 12:28:24 2016 -0400
+
+    Develop URDF for jaco2 7dof spherical 3fingers
+
+[33mcommit cc1bdc2098ccbc7ffae88debb89a7e7dafcd8f4c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed May 11 12:24:24 2016 -0400
+
+    update mesh to conpoments folder from CAD file
+    
+    Different robot type shares parts in rhw mesh foler, instead create/name all
+    links for each robot type
+
+[33mcommit 69cb869f65d39ae6d56a59a8a7ee3781523de922[m
+Merge: 085a1f1 158edd7
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 3 16:27:19 2016 -0400
+
+    Merge branch 'feature_low_positionControl_testPose' into feature_low_positionControl
+
+[33mcommit 158edd7f47144e6c7fc376569d5bfb68e8ec7736[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 3 16:24:02 2016 -0400
+
+    Demo Cartesian pose actionlib: pose_action_client
+    
+    More argument options. Drive robot Cartesian orentation based on Quaternion,
+    Euler-XYZ angles(degree and radian). Verbose display, etc.
+
+[33mcommit 87b46ebc4e67120b769229d62c6aeeced378e2c7[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 3 13:34:29 2016 -0400
+
+    test of pose actionlib. Command and read do not agree
+
+[33mcommit 085a1f13cc62a5fb300ef44ed8c4aa45c0348c15[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue May 3 13:04:06 2016 -0400
+
+    Demo for Joint position actionlib: joints_action_client
+    
+    Able to check arguments in more aspects, command in degree or radian, parse
+    robotType, verbose output, etc.
+
+[33mcommit 0a531d6611724734eda19af127f54f862ae90c9f[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon May 2 13:28:32 2016 -0400
+
+    Done fingers_action_workout.py
+    
+    Multiple position command is provided with different unit. More sophisticated checking on user's input. delete random generate which is not quite useful, and may cause dangers to joint/Cartesian position control as well.
+
+[33mcommit 6b78e29b31e8b4470f012e0c26b65f99d3cf6647[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 27 13:46:35 2016 -0400
+
+    Use virtual joystick command to drive robot to customized home
+
+[33mcommit 725f4659852e4a93658bfa371d084796b75c23b3[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 27 11:32:02 2016 -0400
+
+    Enhance isCloseToOther with compensating 360degree
+
+[33mcommit d93bfc77c5f7f91ac971b3febaa354277c15fc01[m
+Merge: d4f8dad 8438bec
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 25 12:04:21 2016 -0400
+
+    Merge branch 'DSP_ROS_EulerAngle' into kinova_comm
+
+[33mcommit 8438bec620ead53be2174f305f168227ade40a58[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 21 15:19:46 2016 -0400
+
+    Critical Bug fix on orientation conventions between DSP and ROS
+    
+    DSP and ROS using different orientation conventions: DSP using Euler-XYZ, and euler angles are passed to API. ROS using Euler-ZYX and Quaternions.
+    However, in ROS, Quaternions and Rotation Matrix3x3 are based on misusing
+    Euler-ZYX angles, thus not correct. Since ROS has no Euler-XYZ functions, new
+    functions are developped to fill the gap.
+
+[33mcommit d4f8dad349cd6753ad510d8cc27e39361a4e30be[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 21 08:45:22 2016 -0400
+
+    Delete useless code in setFingerPositions()
+    
+    Kinova::setFingersPositions() keeps arm angular positions. The command is in
+    angular control. Therefore, set cartesian pose is meaningless.
+
+[33mcommit 15811c3fdecfbf86e8f6d2872e46f22e61abfb3b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 20 16:29:50 2016 -0400
+
+    Document kinova_comm with doxygen
+
+[33mcommit 9b2f722057538eb76e1948eac4e0882fd5ee8692[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 20 16:29:50 2016 -0400
+
+    Document kinova_comm with doxygen
+
+[33mcommit 6265f90b02f9ff7f402318039e2bc0e69b4d138d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 20 16:28:25 2016 -0400
+
+    Comments of kinova_comm
+
+[33mcommit 9dcb2814e65874074d22a3f76cbe60efd74dc353[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 20 11:41:39 2016 -0400
+
+    Add status parameter to *EndEffectorOffset functions
+    
+    status indicates whether apply the endeffector_offset.
+
+[33mcommit 31197b834a1ef0fc0d26dfd17826064811b77903[m
+Merge: 60150fc 6281fac
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Apr 19 14:19:20 2016 -0400
+
+    Merge branch 'temp' into kinova_comm
+
+[33mcommit 6281fac195b793e259723b9e23d7eeeb7af6952f[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Apr 19 14:18:23 2016 -0400
+
+    Ignore backup files end with ".orig"
+
+[33mcommit 4a57d9fe84b926c6ec0abfc0ec4c754386db99bd[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Apr 19 14:13:55 2016 -0400
+
+    Develop in Kinova_comm
+    
+    Kinova_comm contains the most frequent foundamental functions users may use.
+    Developers working on lowlever programing are encouraged to use Kinova_comm
+    instead of calling Kinova_api.
+    Certain experimental functions are provided in Kinova_api for "very confident"
+    users.
+
+[33mcommit 43f90994b3fc8c2e9496f5d812bd9df7c20d4d9c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 18 16:07:59 2016 -0400
+
+    Cartesian position control precision test
+    
+    Based on various position test, the performance of API setCartesianPosition is
+    evaluated. In the test, a goal position is sent and final position is measured
+    after robot stops motion.  The result is: robot may consider it reach the goal
+    and stop motion when distance is less than 0.01meter or Euler angle difference
+    in 5degrees.
+    
+    To be noted, the test didn't cover all workspace. The test is aiming to gvie a
+    general idea on the position control.
+
+[33mcommit 22b604263c08335035ba7b8248cc40a07a97afde[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Apr 15 15:38:19 2016 -0400
+
+    comment & regroup existing function in kinova_comm
+
+[33mcommit f44c9c8b58dad7959ebd419d419aecf04ce2e7e1[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 14 14:21:10 2016 -0400
+
+    Cartesian position control: pose don't converge to goal
+    
+    Under certain cases, pose will converge to goal within the pre-defined
+    tolerance. However, sometimes it doesn't. A case found is close to the Home
+    position.
+    
+    Check necessarity to "setCartesianPosition()" in while loop as well. Shouldn't
+    be necessary.
+
+[33mcommit 60150fcb877074d51a79b0a73a2fc643e9aa27aa[m
+Merge: 3f8f0f9 ada8ded
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 14 12:16:43 2016 -0400
+
+    Merge branch 'kinova-ros-type' into kinova_comm
+    
+    Conflicts:
+            kinova_driver/src/kinova_arm.cpp
+            kinova_driver/src/kinova_tool_pose_action.cpp
+
+[33mcommit ada8ded6f213ea6113a46ead4b5163f5ae9d1c21[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 14 09:57:31 2016 -0400
+
+    Create new message for KinovaPose
+    
+    KinovaPose use EulerAngles to express robot's orientation, it is also the format
+    used in the SDK and JacoSoft for Kinova robots. This ROS message will be
+    used in both control robot Cartesian pose and reading Cartesian pose. It is a
+    counterpart as geometry_msg::Pose which use Quaternions for orientation.
+
+[33mcommit 25ba98d4cf6201ed39610dfd1a27dcc8886e7514[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 14 08:41:40 2016 -0400
+
+    Correct mico URDF to use the new kinova_msgs::JointAngles
+    
+    kinova_msgs::JointAngles are modified to be coincide with .../out/joint_values
+    topic, which is also the widely used convention for SDK and JacoSoft, etc. The
+    URDF model (espeically the parameter "origin_rpy") should be redefined to
+    display robot properly in Rviz with this new convenient/uniform
+    kinova_msgs::JointAngles.
+
+[33mcommit 01a67b721b0a435175bdbfa5821e607a8f7e4e14[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 13 10:58:07 2016 -0400
+
+    Regulate datatype kinova_msgs::JointValue to be degrees only.
+    
+    Using kinova_msgs with mixed units(degree and radian) can be very confusing.
+    Since it is aimed to ROS messange, the published topic on jointvalue is in
+    degree. More ROS messages regarding to different units for joint angle and
+    Cartesian pose will be provided in the near futher.
+
+[33mcommit e932b2b6970178edfca1e741c07f299880059566[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Apr 13 09:26:03 2016 -0400
+
+    Redefine transform between KinovaAngles and kinova_msgs::JointAngles
+    
+    KinovaAngles are in degrees, and they are used in SDK for joint control. While
+    kinova_msgs::JointAngles are in radians, and they are used for display URDF
+    model in Rviz, and ROS tf topics.
+    They were different in both direction and initial value. Now they are directly
+    linked by a radio of 180/M_PI, with same direction and initial value.
+    Offset for joint 6 "j6o" is not needed for kinova_msgs. Instead it could be
+    parameter in URDF file, and its value is dertermined based on robot type.
+
+[33mcommit efa8618dcbd79eb4c5332f331a593b5048128fc1[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 11 16:31:29 2016 -0400
+
+    Regulate the output range for KinovaPose
+
+[33mcommit 4c3b47fcb2d803f6756b91ba9ad670eabd81e34c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 11 16:09:48 2016 -0400
+
+    Modify the criterion on checking if reach the goal for Cartesian
+    
+    The function KinovaPose::isCloseToOther() is modified to have tolerences for
+    position and EulerAngle respectively.
+
+[33mcommit b89e17508bd6abaf39b78b30eccd230e51af8e03[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 11 15:31:40 2016 -0400
+
+    Fix Euler angle in Cartesian orientation of KinovaPose
+
+[33mcommit 99a80a20899ca39a4236ba17f89b188347b6f40c[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 11 13:56:44 2016 -0400
+
+    modify tf_prefix from kinova_ to mico_ for temp run cartesian command
+
+[33mcommit b452b6ed797a8a293310f1804663ec0e1098b13d[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Mon Apr 11 11:43:29 2016 -0400
+
+    redefine function normalizeInRads()
+
+[33mcommit 3f8f0f97e07054f45f5fa723afc9bc32abb99b21[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Apr 8 15:11:11 2016 -0400
+
+    Developing in kinova_comm.h/cpp
+    
+    Current functions should be improved in kinova_comm, and more functions should
+    be provided. Meanwhile the doxygen document should be completed with all the
+    description, parameters and outputs.
+    
+    Now the setCartesianPosition (line 363) is tested, the test function is in the
+    function homeArm(), while the real homeArm() commented out.
+    
+    Interrupted by redefining kinova-ros-type.h/cpp.
+
+[33mcommit 7150ddc8d66415885df7122afce30521b4150128[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Apr 7 16:01:43 2016 -0400
+
+    Update kinova_api.h/cpp with API files
+    
+    Functions are regroupped in general functions, angular functions, cartesian functions,
+    experimental, etc. The experimental functions are mainly force/torque controls,
+    and should be used in great caution.
+
+[33mcommit 0b85989245e9dc4c964a856b9ab8dff2ef474f47[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Apr 1 09:47:17 2016 -0400
+
+    add include files in CMake to show them in Qt project
+
+[33mcommit c953cd98925d823e946113375ca3c3c334023446[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Fri Apr 1 08:42:19 2016 -0400
+
+    Update the udev/rules file
+
+[33mcommit 44d00d5f540c3b01a3d2df732814d82fe87dd718[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Mar 31 15:42:08 2016 -0400
+
+    Rename topic names for actionlib: joint, pose and finger
+
+[33mcommit adca113182213cf0b27125ec64e70343a853dc77[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Mar 31 14:14:01 2016 -0400
+
+    Rename inside files: jaco --> kinova
+
+[33mcommit 20c56bea37708e9c8aab85b35910aa414efdd40a[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Mar 31 13:10:54 2016 -0400
+
+    Rename inside files: Jaco --> Kinova
+
+[33mcommit b5d56aa7cecf559846ab1106e7d0075fb31d5b48[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Thu Mar 31 12:27:58 2016 -0400
+
+    rename in files: JACO --> KINOVA
+
+[33mcommit d0061af4cf6f23d18bbacf67c180fe59ffa2b2d4[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 16:33:34 2016 -0400
+
+    Rename testers. Rename finished in kinova-ros file names.
+
+[33mcommit 426cc076a1ddaffaa59eb6d99c4ca685ff757a6b[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 16:17:24 2016 -0400
+
+    Rename actionlib position control files for joint angle, cartesian pose and
+    fingers
+
+[33mcommit f1682dab5ee274bb95fc09f134f70fcfb0efaaef[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 16:09:31 2016 -0400
+
+    Rename jaco_arm and jaco_types
+
+[33mcommit e6c4f3f0e4044127533f24f724a16aab28c11c1e[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 15:51:01 2016 -0400
+
+    Rename jaco_api and jaco_comm
+
+[33mcommit 6390376cbc8ce31e4b33714c243db055b9e24a56[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 13:55:29 2016 -0400
+
+    Rename node file names for arm_driver and tf_updater
+
+[33mcommit e5b59de46ac87c2a647273e9d785ce32480fb462[m
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Wed Mar 30 13:11:45 2016 -0400
+
+    Update API files to latest SDK version(64bit)
+    
+    These API files can be fond in folder "/opt/kinova/API/", after install SDK from
+    website "http://www.kinovarobotics.com/service-robotics/products/software/".
+    The 32bit .so files can be updated if install SDK (32bit)
+
+[33mcommit 10b2e6a15631d99e9e96e49ec74a341e8bd4feee[m
+Merge: 8b320f5 2464089
+Author: Longfei Zhao <lzhao@kinova.ca>
+Date:   Tue Mar 1 14:26:55 2016 -0500
+
+    Merge branch 'master' of http://192.168.42.5:7990/scm/ros/ros
+
+[33mcommit 2464089c88c1953fdde1f9b29f2ef07e53bbae9b[m
+Author: Simon Latour <slatour@kinova.ca>
+Date:   Tue Mar 1 12:33:40 2016 -0500
+
+    first commit
+
+[33mcommit 8b320f567f1ff0c9bacc0f80ede1c97e885f2235[m
+Author: Kinova <fboucher@kinovarobotics.com>
+Date:   Tue Dec 15 14:14:57 2015 -0500
+
+    Update README.md
+
+[33mcommit 551a13503912ad3818e88e16cd7a69a21c7cdde3[m
+Merge: 21b4bae 8d44aae
+Author: François Ferland <github@francoisferland.com>
+Date:   Sun May 31 05:05:04 2015 -0700
+
+    Merge pull request #49 from personalrobotics/bugfix/Y_UP
+    
+    Changed COLLADA files to use Y_UP instead of Z_UP
+
+[33mcommit 8d44aae1a0b6eb09bc6b934c4397e2320d84a306[m
+Author: Michael Koval <mkoval@cs.cmu.edu>
+Date:   Thu May 28 19:10:02 2015 -0400
+
+    Changed COLLADA files to use Y_UP instead of Z_UP.
+
+[33mcommit 76a8a4f5d1cd86e09e8498077f0b7e300de28532[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed May 13 20:30:40 2015 +0200
+
+    Fixing errors on new types of robots.
+
+[33mcommit 21b4bae523c2ca2d6d453c82f22aea12cb6313d1[m
+Merge: 135fb06 fca6ef4
+Author: François Ferland <github@francoisferland.com>
+Date:   Tue May 5 10:59:34 2015 -0700
+
+    Merge pull request #47 from peci1/master
+    
+    Added primitive collision elements to Jaco arm.
+
+[33mcommit fca6ef4a8be06d39e1ef296df1468df33e7c946d[m
+Author: Martin Pecka <peckama2@ciirc.cvut.cz>
+Date:   Tue May 5 18:04:07 2015 +0200
+
+    Addition to the last fix.
+
+[33mcommit 51ad812264051da9d02111fc6e55549c824a1f61[m
+Author: Martin Pecka <peckama2@ciirc.cvut.cz>
+Date:   Tue May 5 17:58:40 2015 +0200
+
+    Fixed a bug in mico_arm.xacro which prevented it from loading meshes for collisions.
+
+[33mcommit 46933737dd728c3581ad41294cf3dc8772fca3fa[m
+Author: Martin Pecka <peckama2@ciirc.cvut.cz>
+Date:   Tue May 5 17:05:30 2015 +0200
+
+    Added primitive collision elements to Jaco arm.
+
+[33mcommit 392707f224f65e2bb09ce3c63008e545b20356b2[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Apr 25 13:02:04 2015 +0200
+
+    Fixes for J6 offset in many places.
+
+[33mcommit d57654f710f9f5921c120b848645c7d435c466e3[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Apr 4 17:37:11 2015 +0200
+
+    Moving new finger models for Mico in kinova_description (from P. Moreno's pull request).
+
+[33mcommit b99eb45ea6d8f66805c6038a7a6d7447b165c036[m
+Merge: 2e13696 135fb06
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Apr 4 17:34:00 2015 +0200
+
+    Merge branch 'fferland-prerelease' into fferland-newapi
+
+[33mcommit 135fb0699fb0dc04d22d1a7f85d7ede60e50cd6b[m
+Author: Plinio Moreno <plinio@isr.tecnico.ulisboa.pt>
+Date:   Tue Mar 31 16:06:52 2015 +0200
+
+    Initial support for the finger limbs of the Mico robot. This includes:
+    
+    + Collada meshes of the finger limbs, exported from the STEP file.
+    + Addition of the macro jaco_finger_tip_joint in the jaco_common.xacro
+    + Updated micro_arm.xacro that includes proximal and distal finger limbs
+    + The distal finger limb (smaller one) is modeled as a mimic of the proximal finger limb
+    + The angular range of the fingers is updated and matches the actual robot
+    + Launcher that starts mico robot description and visualization in rviz
+
+[33mcommit b9ba4a0218166c2a5b0621fe84524b5c8edd9f16[m
+Merge: 5b2815c 1a41c3f
+Author: François Ferland <github@francoisferland.com>
+Date:   Tue Mar 10 06:53:34 2015 -0700
+
+    Merge pull request #42 from Kinovarobotics/fferland-prerelease
+    
+    Added new email address in README
+
+[33mcommit 5b2815c4df5838e34fd438cd0a28eefcf2595c73[m
+Merge: 7a9694b 068f637
+Author: François Ferland <github@francoisferland.com>
+Date:   Mon Mar 9 07:17:16 2015 -0700
+
+    Merge pull request #24 from jon-weisz/finger_control_raw_angles
+    
+    Modified setFingerPositions to use the jaco_api::getAngularPosition
+
+[33mcommit 7a9694b80f96ab79e3af4d42652feea4c102d3bf[m
+Merge: 42d3fe6 54d2fce
+Author: François Ferland <github@francoisferland.com>
+Date:   Mon Mar 9 07:07:21 2015 -0700
+
+    Merge pull request #33 from davetcoleman/patch-1
+    
+    Updated README documentation (Outdated API in sample commands).
+
+[33mcommit 54d2fce64ea462e6e1b45fbc1f4a613c4c141716[m
+Author: Dave Coleman <davetcoleman@gmail.com>
+Date:   Mon Mar 2 09:47:37 2015 -0700
+
+    Outdated API
+
+[33mcommit 2e1369676d6011a5bfca991cb6e9a3338d016c0e[m
+Merge: 5044703 84eda36
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 20 18:30:57 2015 +0100
+
+    Merge branch 'jaco2_import' into fferland-newapi
+
+[33mcommit 84eda3655dfedffc610bbd14ca89846720367a96[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 20 18:23:09 2015 +0100
+
+    Fix for J6 offset, was applied to the wrong joint (J2).
+
+[33mcommit 2b9947ccf942250ca361b703cd3be85dd5bd67b0[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 20 17:53:53 2015 +0100
+
+    Correct JACO2 model for link_3 and offset to link_4.
+
+[33mcommit 5044703d01cc2a60c6676cadfe7662c2622cc8f5[m
+Merge: 35375bd 6d38fad
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 15:03:26 2015 +0100
+
+    Merge branch 'renaming' into fferland-newapi
+
+[33mcommit 7e5e390753c530291d558aa9c3d41aa2b4409b97[m
+Merge: a6a66b7 6d38fad
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 15:02:57 2015 +0100
+
+    Merge branch 'renaming' into jaco2_import
+
+[33mcommit 6d38faddf11018e34ce2a2494d4639b62470ee53[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 15:02:37 2015 +0100
+
+    Fixes to README file about the kinova_bringup package.
+
+[33mcommit 35375bd58ee18ac2d24fb4209f662168938ccc03[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 14:59:25 2015 +0100
+
+    Node service for SetEndEffectorOffset.
+
+[33mcommit 82185d792eeb4e27d6507a94bd8ae78c632ef592[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 14:46:32 2015 +0100
+
+    Fixes to support new API function signatures.
+
+[33mcommit f617424d9a66406e40435a4187af6567259c1ff6[m
+Merge: 5f3ede3 7ed0479
+Author: François Ferland <git@francoisferland.com>
+Date:   Sun Jan 18 13:54:41 2015 +0100
+
+    Merge branch 'renaming' into fferland-newapi
+
+[33mcommit a6a66b77b6d24f45438e55d7d3305c6218705bce[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 15:51:25 2015 +0100
+
+    New launch file for Jaco2 arm (use_urdf mode only.)
+
+[33mcommit 6b8b46293d5f2cce5d3bbd1b12f91e872468fd8b[m
+Merge: 7acb072 7ed0479
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 15:45:40 2015 +0100
+
+    Merge updates from branch 'renaming' into jaco2_import
+
+[33mcommit 7ed0479c56cdfe30b15e4fcbb921995e5bb29b24[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 15:45:19 2015 +0100
+
+    Fixing bad reference to old jaco xacro file in display_jaco.
+
+[33mcommit 7acb072fd97d268d0b96a7fe62df0f5b54c2fa90[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 15:44:21 2015 +0100
+
+    Jaco R2 URDF model.
+
+[33mcommit bc2cb9d656538d57781af5b49c6e80fbba75b765[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 15:15:50 2015 +0100
+
+    Importing meshes for Jaco R2.
+
+[33mcommit c0cb878980d6fc55fa135fe154518a88e2514b97[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:44:54 2015 +0100
+
+    Rename the 'jaco' namespace of kinova_driver to 'kinova'.
+
+[33mcommit 8aca4b3a99b7ca0e6e602a8ba49dcf4450f4bfde[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:36:29 2015 +0100
+
+    Renaming jaco_msgs to kinova_msgs.
+
+[33mcommit d8739e80e7c890651d5a649238dc059a65535bb5[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:26:34 2015 +0100
+
+    Renaming jaco_demo to kinova_demo.
+
+[33mcommit 946994749cb3400430173f8a4121b1689454409f[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:23:07 2015 +0100
+
+    Renaming 'jaco_driver' to 'kinova_driver', topics stay the same.
+
+[33mcommit 455a7c927c2411f163f703c758cd2853b928d71c[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:03:42 2015 +0100
+
+    Adding an new kinova_bringup package for launch files.
+
+[33mcommit ffa61e3b4d01609a80e469b79d2417970ae94505[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 14:01:45 2015 +0100
+
+    Update old references to jaco_model.
+
+[33mcommit 1c117ff13f2a76360cc6dacf5d46ebeab1d943da[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Jan 17 13:59:48 2015 +0100
+
+    Renaming jaco_model to kinova_description.
+
+[33mcommit 42d3fe66ecb4b32b3708f21b7970ec6cf4a97c44[m
+Author: François Ferland <github@francoisferland.com>
+Date:   Mon Jan 12 18:55:12 2015 +0100
+
+    Update README.md
+    
+    Documentation fixes.
+
+[33mcommit 94775235ebfbe03fbe85cbe3a2a23c85740789a0[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 12 18:31:22 2015 +0100
+
+    Note on JACO2 support.
+
+[33mcommit 8dff1c31979cdc5010d8d2a86d4a98f29ce88ff2[m
+Merge: 44e6d23 a407955
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 12 17:50:27 2015 +0100
+
+    Merge branch 'master' of https://github.com/Kinovarobotics/jaco-ros
+
+[33mcommit 1a41c3f2ee8ead5c9fc0200d3a28704efb9860e6[m
+Author: François Ferland <github@francoisferland.com>
+Date:   Mon Jan 12 17:35:19 2015 +0100
+
+    Added new email address in README
+
+[33mcommit 44e6d2357be32bb3b7af47fa1ed4a5e6a27df3f2[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 12 17:31:44 2015 +0100
+
+    Documentation update.
+
+[33mcommit 7c49113e5de9352153f986c9f7892973f733a999[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 12 17:15:15 2015 +0100
+
+    Removing experimental code from release branch.
+
+[33mcommit 5f3ede360b40863fb5c6809944bd3d21e7feb8e2[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 6 15:34:40 2015 -0500
+
+    New API files (untested, 5.01.04).
+
+[33mcommit 12f24bd2f2c6fff3387cf6abb94987ffccb9066b[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 6 11:24:34 2015 -0500
+
+    Adding (very safe) joint limits to Mico model.
+
+[33mcommit 2781a54e27e3e84ab3504b29d0963ec65ff79a6b[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 6 11:20:33 2015 -0500
+
+    Fix to angle rate conversion, also applies to wrench torque.
+
+[33mcommit 9fbc20d4d0afb7628ec0e3ee6638b8433437cada[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Jan 6 11:09:48 2015 -0500
+
+    Adding an option for joint rate angle conversions (true by default for now.)
+
+[33mcommit a0b0c6ab28a50120b09076325fd3baca36f4a64a[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 17:19:12 2015 -0500
+
+    Some configuration changes for JointTrajectoryController (Jaco only) and MoveIt, still has issues with J4 and J5.
+
+[33mcommit 91301d9fc683eddfcb3269dd0eb03c2d7c7810db[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 16:43:09 2015 -0500
+
+    Typo in CMakeLists.txt.
+
+[33mcommit df57bd30025879a4c38d5f9eebfea131f2257a34[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 16:39:22 2015 -0500
+
+    Proper limits for jaco joints.
+
+[33mcommit afbc812d02082f1e2e1e1f6eaac4e3fb1dd489f3[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 15:55:59 2015 -0500
+
+    Fix a typo in 'limits' element of URDF joints.
+
+[33mcommit e25024abd4b62c5bcedc5680453b2bb6dd935d57[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 15:48:06 2015 -0500
+
+    Added a warning in the kinova_ros/ros_control stack.
+
+[33mcommit 401a74c292a71e016e7b270a5f311145f17bc966[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Jan 5 15:47:44 2015 -0500
+
+    Notes on force control and admittance demo.
+
+[33mcommit 13568b370a979a423f8e57ccbdc853d232ecd61c[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 17:34:11 2015 -0500
+
+    Mico MoveIt! and JointTrajectory config tweaks, still has path tolerance issues.
+
+[33mcommit ede428bb8413c123c4b4a8cf76abade26526dbef[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 17:33:48 2015 -0500
+
+    Adding write throttling option to KinovaHardwareInterface.
+
+[33mcommit d816fb32b60c13de854770b2b0794d9205d96295[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 17:33:12 2015 -0500
+
+    Added missing velocity limits to jaco/mico joints in URDF.
+
+[33mcommit 38e73bbb6eb47a2208e1a06b7cc64deeef4398a9[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 17:31:26 2015 -0500
+
+    Added individual position controllers config for Mico.
+
+[33mcommit 3770df59bf23d648de27580d7b692a198c632c35[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 16:45:02 2015 -0500
+
+    Package name fix for kinova_robot_controllers.
+
+[33mcommit c820dd3091c751c5695b6285a3472b3aafa597cf[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 16:11:00 2015 -0500
+
+    Changing 'jaco_controllers' to 'kinova_robot_controllers' for launch files of all robots, completed controller configuration for Mico and MoveIt./nodes/jaco_demo/force_control.py
+
+[33mcommit 70358e4f4084f84db624e5e3701b32c1790ba7d4[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Fri Jan 2 15:55:10 2015 -0500
+
+    Base MoveIt! config for Mico.
+
+[33mcommit e0a0bdb5b5a0c01dc3c3b88fca193ce2e1c6fc32[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 16:01:18 2014 -0500
+
+    Working planning and control from MoveIt! to ros_control of a Jaco arm. Currently not very smooth, as the control loop has to be slow (10 Hz), or the angular commands do not execute themselves correctly.
+
+[33mcommit fb160bac01c7246dd018b1122a511b7741de05b5[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 14:35:48 2014 -0500
+
+    Splitting individual position controllers in their own launch file for testing purposes.
+
+[33mcommit b1ede4ef0568ab363ab1a1c122f7ef583c52330b[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 14:30:04 2014 -0500
+
+    Fix for Jaco vs. Mico wrist angle conversion offset.
+
+[33mcommit 646a468234d67e567d33c6db17729e77bb33b197[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 13:40:02 2014 -0500
+
+    Tweaks to move_it config and joint names for fingers.
+
+[33mcommit ec5cb92775ef329c441f02dba4ad7ce076348482[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 13:22:38 2014 -0500
+
+    Jaco MoveIt! config (generated with the Indigo version of the package). Planning works with OMPL RRT default configuration.
+
+[33mcommit 7d34bfe1f1b568db59bcecce5bc18d6e1441c0c5[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 31 11:26:06 2014 -0500
+
+    Fix for angle conversions, control loop fully working (at low rate).
+
+[33mcommit 6906e12fbe4463aad28f62b9f7df6c09eedd37c5[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 16:34:37 2014 -0500
+
+    Testing joint-space commands through ros_control, still has some isses (especially J2).
+
+[33mcommit eb5d894cb3ea6b251f5c25fd9b0798ed194335f1[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 15:56:07 2014 -0500
+
+    Fix to angle conversion in velocities.
+
+[33mcommit 52adb11ca63cc26741c58dad01e429ea0baf6425[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 15:48:21 2014 -0500
+
+    Angle saturation, note on killing the test launch file.
+
+[33mcommit 37b49ddcf7ec25103ada00ba0587014fa6a1ebf6[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 15:30:49 2014 -0500
+
+    Working ros_control proof-of-concept for joint state updates.
+
+[33mcommit 69484385c0806cc3a998dbba868f6db16d580593[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 14:08:46 2014 -0500
+
+    Fix for invalid hardware null pointer, test launch file.
+
+[33mcommit fffaa9f5f0c92e87595ce4b2bbaaedaba6830f85[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 14:00:26 2014 -0500
+
+    Basic control loop for joint state updates, reinstated the Comm layer library name (since it's used internally with dlopen).
+
+[33mcommit e2e0cc4ce4fae1beee31cba76d7904a7066da795[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 12:27:41 2014 -0500
+
+    Missing pre-compiled library files (with more Linux-friendly file names).
+
+[33mcommit 2596940196361992061cd1f019ccb1eab4c07d01[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 30 12:26:15 2014 -0500
+
+    Skeleton for a ros_control-based Kinova node.
+
+[33mcommit 835463bc15227e8195dff9d9efe0e8b698c1ae1b[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 29 14:29:00 2014 -0500
+
+    Missing service file from commit a4f8c94.
+
+[33mcommit d51bd309984672b4e4a0300f40a9891c70abfde2[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 29 14:28:34 2014 -0500
+
+    Quick test/demo node for force control.
+
+[33mcommit a4f8c946813e9a3e885fdde41d24e9552e85bd10[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 29 14:28:18 2014 -0500
+
+    Interface for cartesian force control.
+
+[33mcommit 5169cc29d82f3bc5b9cdad731e71c7175d6526dc[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 29 13:49:23 2014 -0500
+
+    Slightly less sensitive admittance in Z for the demo launch file.
+
+[33mcommit eefad65ea38a5dee24e1207c74a0b9722d69e3ad[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 29 12:41:05 2014 -0500
+
+    Proper meshes for Mico, URDF fix for joint 4 offset on both arms.
+
+[33mcommit 88fc04f97cf44f493175c68fede428586e25188d[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 15:46:00 2014 -0500
+
+    Fix for type in effort output, J6 angle off by 10 degrees.
+
+[33mcommit e19d683ec27fa3142b51d6fbab310b60a33d0e34[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 14:46:00 2014 -0500
+
+    Fix a whitespace bug in demo goal generator and add a pose sequence with valid quaternions.
+
+[33mcommit 13a68e6f1d818ae6d556781f2b6c5910a975d885[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 14:26:26 2014 -0500
+
+    Changed the default cartesian velocity timeout to a value that enables correct velocity control from the API (no pauses between calls).
+
+[33mcommit 3be900494f807a3f9422dba6af27ecdf3a598b1f[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 13:51:46 2014 -0500
+
+    Publication of joint velocities in JointStates topic. Effort too, but the values are not necessarily valid (API returns fixed values).
+
+[33mcommit f3721b724e3fefd3b052e2620db9e32d5f49418d[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 12:13:46 2014 -0500
+
+    Change INFO messages for DEBUG ones in joint and cart. velocity callbacks.
+
+[33mcommit 5df70fd9e0aaaeb55acc1b78f487f9880b343552[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Sat Dec 27 12:11:28 2014 -0500
+
+    Basic ROS admittance control to demonstrate/test wrench output and cartesian velocity input.
+
+[33mcommit 887623b76dc678dacf4c780131d7783e90dad76f[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 24 16:14:14 2014 -0500
+
+    Temporary meshes for mico_link_4 and 5, updated offset between those joints.
+
+[33mcommit 303af042ec489fd3cd06c844ad37f9562575885b[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 24 15:44:27 2014 -0500
+
+    New (temporary) meshes for mico_link_2 and 3, fix for the Z offset between joint 3 and 4 for both robots (still need to confirm).
+
+[33mcommit 126027279aab67614afe5744bdf61c9ba73337bd[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 17:38:46 2014 -0500
+
+    Fix for RobotType 3.
+
+[33mcommit eac668515955e5464a19fcb609733fa9a44e0020[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 17:17:57 2014 -0500
+
+    Publication of the end effector forces as a wrench. Still need to rotate in the proper frame, figure out torque format.
+
+[33mcommit ae1033209d54bdfb59cc1a4d48c9767cce27e617[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 16:01:55 2014 -0500
+
+    Missing updates from commit 3b7211b.
+
+[33mcommit 3b7211bda1b9a54b27461e30e36e79d5b39ac983[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 16:01:31 2014 -0500
+
+    Cleanup between jaco and mico URDF models.
+
+[33mcommit 829b9e1de8e27c8b6fb6c5e9b1396f391c59cbd4[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 16:01:11 2014 -0500
+
+    Proper finger angle conv. ratio for jaco_arm.launch.
+
+[33mcommit a22bc186df90ba25a9d6bdc49cbeb0ee390c88cf[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 15:38:32 2014 -0500
+
+    [Start|Stop]API cleanup.
+
+[33mcommit 9dfa7617120c9cb8f3b8dc33692610f1478dc0fa[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 14:56:56 2014 -0500
+
+    use_urdf mode for mico_arm.launch (meshes currently don't fit), (approximative) finger TF angle updates in use_urdf mode.
+
+[33mcommit a40795544d0d10ff0c45da64a8788c59d9c86e20[m
+Merge: fea4714 8a44adb
+Author: François Ferland <github@francoisferland.com>
+Date:   Tue Dec 23 14:35:37 2014 -0500
+
+    Merge pull request #21 from werdnum/master
+    
+    Add missing 'dl' dependency to CMakeLists.txt
+
+[33mcommit 87d2daa778a12d11a08b266f587369ceceacbe02[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Tue Dec 23 14:04:26 2014 -0500
+
+    Fixed header in joint_states publication, add an optional use_urdf mode to jaco_arm.launch that uses a robot_state_publisher instead of the custom TF publisher.
+
+[33mcommit 66ddf4ab4306caa160506d776d75afe2ee284c06[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 22 16:33:35 2014 -0500
+
+    First draft of a Mico URDF model with meshes copied over from the Jaco (and wrong transforms in J4 and J5).
+
+[33mcommit 111e24533055ead545b19814c6cf3512d425979d[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Mon Dec 22 15:30:19 2014 -0500
+
+    Quick fix to the tool pose orientation quaternion.
+
+[33mcommit 944844c5abd681c059b28e0f3fd9ca9eaeef0165[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 17 17:33:49 2014 -0500
+
+    GCC 4.8 missing dlopen symbol fix (now require a direct dependency on libdl).
+
+[33mcommit 8c953454f7e856e9c4f9681087bb02e77fc2461c[m
+Author: François Ferland <git@francoisferland.com>
+Date:   Wed Dec 17 17:32:47 2014 -0500
+
+    Quick launch file that only upload the jaco standalone robot description.
+
+[33mcommit 068f637161eace5671b15b290fa75e9316321194[m
+Author: Jonathan Weisz <jon.weisz@gmail.com>
+Date:   Mon Oct 6 20:44:56 2014 -0400
+
+    Modified setFingerPositions to use the jaco_api::getAngularPosition
+    instead of jaco_comm::getJointAngles and to use a AngularPosition
+    control instead of CartesianPosition control. This fixes issue #23.
+
+[33mcommit 8a44adbe152a9abd6f4d5100b7b9b4a32e72b2ed[m
+Author: Andrew Garrett <andrew@andrewjgarrett.com>
+Date:   Mon Sep 22 11:16:09 2014 +1000
+
+    Add missing dependency
+
+[33mcommit fea4714cf95274c99538f3f221eaad5336abe460[m
+Merge: 2bcd161 6eaef89
+Author: Administrator <administrator@cpr-gsu03.cpr-gsu03>
+Date:   Tue Aug 19 16:51:13 2014 -0400
+
+    Merge branch 'master' of https://github.com/Kinovarobotics/jaco-ros
+
+[33mcommit 2bcd1613a87844418162d7290fe740c67426c0f1[m
+Author: Administrator <administrator@cpr-gsu03.cpr-gsu03>
+Date:   Tue Aug 19 16:50:06 2014 -0400
+
+    Modified script so that the help message lined up with the file name
+
+[33mcommit 6e9e415aea095f23aa4aa0989fbdc744d72267cc[m
+Author: Administrator <administrator@cpr-gsu03.cpr-gsu03>
+Date:   Tue Aug 19 16:46:07 2014 -0400
+
+    A dirty hack to get jaco_arm_kinematics to publish names that match with jaco_arm.xacro
+
+[33mcommit 6eaef893ee33f4f29d952e49bf7295d6845e73b0[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Aug 18 22:04:07 2014 -0400
+
+    Update README.md
+    
+    Corrected gripper workout example description, added case where serial number is not set on the arm.
+
+[33mcommit 83c692a2efd511de27cdd9fcc4897536d4fbf611[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Aug 18 15:50:40 2014 -0400
+
+    Update grip_workout.py
+    
+    Changed help file text so that the file name it describes matches that of the actual file.
+
+[33mcommit 25b1e24bee7e3441b45128b775145d3f24f4777d[m
+Merge: 36ccec0 fcb4b99
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Wed Jul 30 14:35:28 2014 -0400
+
+    Merge pull request #19 from hommeabeil/patch-1
+    
+    Urdf model updated from xacro
+
+[33mcommit 36ccec03e777640710f78b79d5d2c357fe6c1ae9[m
+Merge: e7e012c ff0cf48
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Wed Jul 30 14:34:11 2014 -0400
+
+    Merge pull request #18 from jpmerc/patch-1
+    
+    Modified joint names
+
+[33mcommit fcb4b99145f5dcbfa5ef5fea32722e4b14759bb9[m
+Author: hommeabeil <jeanbouch418@gmail.com>
+Date:   Wed Jul 30 11:03:12 2014 -0400
+
+    Urdf model updated from xacro
+    
+    This is the updated urdf model from the new xacro file.  The y angle have been inverted from a previous pull.
+
+[33mcommit ff0cf48123a20fef38fcd9ac51ae61ac9c05139d[m
+Author: Jean-Philippe Mercier <jpmercier87@gmail.com>
+Date:   Wed Jul 30 08:33:56 2014 -0400
+
+    Modified joint names
+    
+    Added the prefix "jaco_" to the joint names to match with the urdf. It allows to see the arm correctly in rviz.
+
+[33mcommit e7e012c8343e1ef40b30c6f7315980b1dc27e4c5[m
+Merge: 3b58536 23da819
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Fri Jul 18 09:40:50 2014 -0400
+
+    Merge pull request #4 from oars/master
+    
+    Aligned jaco model with real one
+
+[33mcommit 3b58536362ed7d812d8a186593775d5e76b273be[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Wed Jul 9 16:58:40 2014 -0400
+
+    Update README.md
+
+[33mcommit 78ef66ed495203170adda2e41ac182ba3d7444ac[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Wed Jul 9 09:40:54 2014 -0400
+
+    The joint_state topic now publishes angles in radians with DH parameters applied.
+
+[33mcommit d018352f4e65ee36820652d8b278fbde94a3cf9f[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Jul 8 10:27:22 2014 -0400
+
+    Corrected the frame_id being passed to the node.  Removed the divide by mag operation, as it seemed to mess with the array formatting passed to the node.
+
+[33mcommit e80a300a922b7c62b9755ea4e659fb9257f7ebd6[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Fri Jul 4 16:30:48 2014 -0400
+
+    Fixed a bug in which the first array item in a set of angles wasn't being read.
+
+[33mcommit 80c9e21c0a94f6be031be2fc910b9cb3b0068c8b[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Fri Jul 4 15:59:05 2014 -0400
+
+    Fixed a bug in which the quaternion magnitude was not calculated properly,
+    causing the quaternion orientation fed to the driver to be incorrect.
+
+[33mcommit 3088605cadbf3db6ec6e13d18dbe3e9d8df0e61a[m
+Merge: bf92fb3 6e4331c
+Author: abencz <abencz.uwaterloo@gmail.com>
+Date:   Fri Jul 4 15:47:02 2014 -0400
+
+    Merge pull request #17 from bradenstenning/master
+    
+    Initial release for hydro
+
+[33mcommit 6e4331c2ea4da9b9827bc1e6fed096f56eb5a970[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Fri Jul 4 02:20:09 2014 -0400
+
+    Added new content to the README.md. This is an updated version of the content on the ROS fuerte wiki page.
+
+[33mcommit 7175bb4a83416cfe7ef6d525cf84ec2dc6a081d0[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jul 3 16:07:48 2014 -0400
+
+    Fixed an issue preventing installation of jaco_demo
+
+[33mcommit 506f506095e78380dd07e9152d3cb37eecd5880e[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jul 3 16:01:18 2014 -0400
+
+    Missed a few typos
+
+[33mcommit 8f1f56ed88e47e97508cb87088bd1beff61968b3[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jul 3 15:59:19 2014 -0400
+
+    Made changes in response to pull request sent to Kinovarobotics and feedback from abencz
+
+[33mcommit e4bb7624b898b10db98ebd65320596c6101e5708[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jul 3 14:58:55 2014 -0400
+
+    Changed the README to markdown and included the wiki documentation
+
+[33mcommit 60a213c73aec6d86ef3196e4f5321bf4d3669f6e[m
+Merge: fc4715b 4897e2b
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jun 26 14:29:42 2014 -0400
+
+    Merge branch 'release/hydro-0.0.2'
+
+[33mcommit 4897e2b5fce1443550b191693a052972513f7f47[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Tue Jun 24 13:40:50 2014 -0400
+
+    Linted all files and checked style guide
+
+[33mcommit c7b8d3e7d106d9644a913e529337e280d3b92168[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Tue Jun 24 10:12:13 2014 -0400
+
+    Parameterized the tf updater so that we could use it with the mico and have the correct lengths
+
+[33mcommit 76cbaaee3e4b0aa067e1f1db7260f2c768247bc6[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Mon Jun 23 13:49:26 2014 -0400
+
+    Made the tf trees have a prefix to allow for multiple arms with their own tf trees
+
+[33mcommit f6156100a60c76cde0e02818ff496d76a284211b[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Sun Jun 22 18:42:50 2014 -0400
+
+    Made the node not crash even when the arm is disconnected during an action
+
+[33mcommit bf822d2c39fbf6eb74f22d63e6d52522f915230f[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Sat Jun 21 20:13:22 2014 -0400
+
+    Made node recover in the event of loss of comms with the arm, except it will still crash if the loss happens while an action is in progress. Reason for that is still unknown.
+
+[33mcommit 2fcfd0bfe6623aed85b267337810a406be97b672[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Fri Jun 20 17:52:13 2014 -0400
+
+    Made the joint angle and cartesian actions have a stall option. Parameterized many of the previously hard-coded parameters
+
+[33mcommit 787441c7f66ffcc0b8f2503ac323d032247935af[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Fri Jun 20 16:20:04 2014 -0400
+
+    Made the gripper action stall
+
+[33mcommit 986b088153d6066a33404cf31bdd1934ed004ccb[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Wed Jun 18 15:23:10 2014 -0400
+
+    Added ability to use two arms at the same time and select which arm to use in the launch file. Still need to verify that the transform tree is correct (or more likely, need to fix the transform tree)
+
+[33mcommit 648e90521ea3c5ce410206c9b0b11ed748e7391b[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Tue Jun 17 21:42:07 2014 -0400
+
+    Updated gitignore to exclude the jaco_msgs inside the jaco_driver
+
+[33mcommit 5455aba2a2612948803653e4205889d3b69c1744[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Tue Jun 17 21:40:42 2014 -0400
+
+    Many things changed, bad job not doing a commit earlier.
+
+[33mcommit 889d0ee23db03f9deef3fd91619b7c3e30482df7[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jun 12 13:20:37 2014 -0400
+
+    Working on figuring out the right API version
+
+[33mcommit 6a828e1b3f29c0deda79463b9a4628678b876549[m
+Author: Braden Stenning <braden@stenning.com>
+Date:   Thu Jun 5 20:50:07 2014 -0400
+
+    Minor modifications to the test tools
+
+[33mcommit 87fc2eaf51db09d2486967c1605496ea4ea3786e[m
+Author: Braden Stenning <bes@y510p.(none)>
+Date:   Thu Jun 5 15:43:34 2014 -0400
+
+    Removed a few things that accidentally got checked in
+
+[33mcommit 5e8abbd00061a98851c93ca3fa35b6293614be6d[m
+Author: Braden Stenning <bes@y510p.(none)>
+Date:   Thu Jun 5 15:42:27 2014 -0400
+
+    Cleaned up a lot of formating while adding a whole bunch of debug information. Also created some python executables to help automate testing
+
+[33mcommit fc4715b98a6bd848d7216811697e61066abe4672[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Sat May 24 00:27:09 2014 -0400
+
+    Updated API to 5.01.01
+
+[33mcommit 5fb53281e0f7b30f5c2ddb7bbe42d4adf6a06aa2[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Sat May 24 01:00:29 2014 -0400
+
+    Cleaned up CMakeLists.txt and package.xml files
+
+[33mcommit 9d24ba8215e81dc218af80a3963c6c1bb8804e39[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Mon Mar 17 14:00:42 2014 -0400
+
+    Added UDEV folder and udev rule
+
+[33mcommit 0a8eef8582fdc06c540de580396b2cc01a4b7a6e[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Mon Mar 17 13:21:29 2014 -0400
+
+    Removed a stop control command from HomeArm
+
+[33mcommit 27005c6951c220e529b34fcf0e01f43b8b3bec40[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Fri Mar 14 11:47:47 2014 -0400
+
+    Added a delay to finger initialization.  Fixed the finger_action_client.py script.
+
+[33mcommit 0b52db961f3acb053439e8c1a69dfcb97b50f829[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Fri Mar 14 11:28:02 2014 -0400
+
+    More refinements. Note: Dumping EraseAllTrajectories into all Set... comands doesn't help at all!
+
+[33mcommit bf686f9b06867024294a76be0fdb4318e13b19db[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Thu Mar 13 13:33:35 2014 -0400
+
+    More changes to help eliminate API crashes
+
+[33mcommit 53e59f574a8e3ae9f1dbb14bc39d9c45a86fc265[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Thu Mar 13 10:28:06 2014 -0400
+
+    A few more tweaks and some cleanup to the finger initialization.
+
+[33mcommit 18982e2b1cc10ad1e38e8d9a63f6dcdfa0952085[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Thu Mar 13 09:19:59 2014 -0400
+
+    Tweaks here and there to help prevent the API from crashing.  At this point the arm responds to cartesian commands, but fingers will not move.
+
+[33mcommit d3008a9bf18c0bf3743072e44c1e2c738b3f4c44[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Wed Mar 12 11:10:32 2014 -0400
+
+    Removed old finger initialization code
+
+[33mcommit 990eac36f09f6bdd41a6b15a74a8ccb9561e684e[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Wed Mar 12 11:04:58 2014 -0400
+
+    The driver now uses Kinova's MoveHome and InitFingers routines to initialize the arms.
+
+[33mcommit 654c92bd3f0f879bf15ca6934aa2066e0a861068[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Mar 11 16:15:08 2014 -0400
+
+    Retract/Ready position is now determined based on "RetractType" value.
+
+[33mcommit fe3dcaa6d9e70e12a668c34adc8ccb89962aad68[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Mar 11 14:28:53 2014 -0400
+
+    Added script that enables permissions to connect with the arm
+
+[33mcommit 18cb321aad64a490ede0ca19e7d166a9b6b59970[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Mar 11 12:49:19 2014 -0400
+
+    Added a launch file that only launches the arm control node.
+    
+    Added a script that changes permissions to access the arm.
+
+[33mcommit 4e6548b31dbc31972ef74a4c25669bad11a08d63[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Mar 11 10:52:41 2014 -0400
+
+    Changes hand position to POSITION_MODE, source now builds properly. Older "THREEFINGERMODE" is no longer available.
+
+[33mcommit 843d24db4e5f69dd761a245f336d03aa140ed8a5[m
+Author: jeff-o <jschmidt@clearpathrobotics.com>
+Date:   Tue Mar 11 10:29:40 2014 -0400
+
+    Dropped in the latest APIs from Kinova
+
+[33mcommit bf92fb3d6eea70d5fb19e5a5a5717376ddce710d[m
+Merge: 117fcd8 f067cd4
+Author: abencz <abencz.uwaterloo@gmail.com>
+Date:   Mon Jan 13 11:50:09 2014 -0800
+
+    Merge pull request #10 from ibaranov-cp/master
+    
+    Catkinize the Jaco Ros Driver
+
+[33mcommit f067cd485287cbd0016c1dc26a00dc5cea461b6b[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Nov 21 14:01:01 2013 -0500
+
+    Implemented Jeff's changes for MICO
+
+[33mcommit dca1beb9ecc97b0c6a9998b342313870ad2436c9[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 17:42:48 2013 -0400
+
+    removed wrong statement in readme
+
+[33mcommit 810fb0cb8c61d35c043f8727a33cd69f2179292a[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 17:37:24 2013 -0400
+
+    fixed catkin_make install issues with Kinova binary .so files
+
+[33mcommit eb2c6eda82034fb7655535f1950e4bd73fa0a2d9[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 14:42:20 2013 -0400
+
+    Continuing work on driver, making install work.
+    Added jaco model into repo.
+
+[33mcommit 405602914639b1c21c11583aa058d028bd928230[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 13:06:52 2013 -0400
+
+    added Readme
+
+[33mcommit d7c5342bfb0e11ff98616a6886a5771375ccff2b[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 13:03:10 2013 -0400
+
+    Updated XML authors and descriptions
+
+[33mcommit b4a3995dc99a0309d9e491aefc10cad661a61715[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 12:57:24 2013 -0400
+
+    adding message files
+
+[33mcommit 7583f624783e1cfec5071555a78f4498bdfcbc5a[m
+Author: ibaranov <ibaranov@ubuntu.ubuntu-domain>
+Date:   Thu Oct 3 12:54:36 2013 -0400
+
+    Changed to Catkin, work ongoing, probably broken a bit
+
+[33mcommit 23da8190c80e4c6bdca2923b59068bf76fc5aba3[m
+Author: Oscar Ramirez <oscar@rmz.ca>
+Date:   Thu Aug 29 07:18:58 2013 -0600
+
+    Aligned jaco model with real one
+    
+    Several frames of reference were rotated/mirrored when compared to the real
+    robot.
+
+[33mcommit 117fcd8a3f761f3088b1dcc09663600f37a495fe[m
+Author: abencz <abencz.uwaterloo@gmail.com>
+Date:   Thu Aug 22 10:10:24 2013 -0400
+
+    Updated authors in jaco_driver manifest.xml
+
+[33mcommit cbd080e03bf0ae1c325ae173620048e288a2e645[m
+Author: abencz <abencz.uwaterloo@gmail.com>
+Date:   Thu Aug 22 10:09:13 2013 -0400
+
+    Updated authors in stack.xml
+
+[33mcommit 5811fface9a85089bdf19a5465b94b062bd8bbb1[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Mon Jul 22 10:55:54 2013 -0400
+
+    Added udev rule for Jaco.
+
+[33mcommit 23668ce996b5121c314bc9a34cebaf2e7ccd7ddf[m[33m ([m[1;33mtag: jaco-0.0.1[m[33m)[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 10 11:10:34 2013 -0400
+
+    Updated stack/package descriptions.
+
+[33mcommit e250d550c4e320ff58e15ab3bb2ebbbe58f73eb3[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Tue Jul 9 09:48:44 2013 -0400
+
+    Added "home_position" parameter.
+    
+    Arm's home position can now be set as a parameter to the driver node.
+
+[33mcommit 1565e8e70f2457246ee8043408dfb0acad5ed154[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Mon Jul 8 19:17:35 2013 -0400
+
+    Stop fingers when "stop" service invoked.
+
+[33mcommit 499d2245719b2267137bdf0c1619026fb06c9a33[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Mon Jul 8 19:13:29 2013 -0400
+
+    Fixes for finger position server.
+    
+    Removed unnecessary delay and fixed compile bug.
+
+[33mcommit 23d99cd8b78fe42cbffa1d0d661b652f1a738872[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Mon Jul 8 15:52:56 2013 -0400
+
+    Check for arm stop condition during action.
+    
+    If the arm is stopped with the "stop" service, actions will abort
+    instead of continuing.
+
+[33mcommit 9f7b943246f7ba7c5a2e4a27ae2b176cbe90f194[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 17:31:51 2013 -0400
+
+    Added compare function to Set Fingers.
+
+[33mcommit 9102b698e8296b1e4c848a7f344517db1c9d5e80[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 16:53:37 2013 -0400
+
+    Added Finger control action client script
+
+[33mcommit 37e038e567532a721ee3939be9f4356fb05ee522[m
+Merge: 2158724 893e1c0
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 16:29:33 2013 -0400
+
+    Merge branch 'master' of ssh://internal.clearpathrobotics.com:1222/git/KIN/ros-jaco-arm
+
+[33mcommit 215872438261f9b1cdb55c158c52dd998c0e03ae[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 16:27:17 2013 -0400
+
+    Added finger control actionlib
+
+[33mcommit 893e1c0b3a579d088330e0ec58621c1f4b09a2b1[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Sat Jul 6 11:56:56 2013 -0400
+
+    Looser dead zone for angles in degrees.
+
+[33mcommit 0ecc0f49bbfe66930b8aeb6178d066ad65bb6052[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 11:51:41 2013 -0400
+
+    Added sample actionlib python scripts
+
+[33mcommit d39f51494a37471d2a694f8321aa029af6e1e4e9[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Mon Jul 8 09:20:42 2013 -0400
+
+    Updated authors in stack and manifest.
+
+[33mcommit 88c9cd6d00dfc4f1c41c432759830808ffebd17d[m
+Merge: acca6bf f726354
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 21:09:46 2013 -0400
+
+    Merge branch 'actionlib'
+    
+    Actionlib servers implemented for cartesian and angular control of joint
+    positions. Finger control still TBD.
+
+[33mcommit f726354773c22ed964fa1089d6d7386c0dd40c63[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 21:05:04 2013 -0400
+
+    Removed topic for setting joint angles.
+
+[33mcommit 2576eff06f2353d796618bd47c7da01d06e1d5ef[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 21:01:55 2013 -0400
+
+    Result from pose server is now a pose.
+
+[33mcommit ca51f5c126a34e49f0608434b62813874ee70add[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 20:52:08 2013 -0400
+
+    Send angles in degrees for tf_publisher.
+
+[33mcommit 40c4135b4428817255ad16886947d84a07bf61cc[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 20:42:41 2013 -0400
+
+    Action server for angular position.
+
+[33mcommit 85bb92a7555c02440c12144c388243d706cc3882[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 19:24:07 2013 -0400
+
+    Added JacoAngles type.
+    
+    Should help when working with angular commands/poses and conversion
+    between Jaco API and ROS data formats.
+
+[33mcommit 2060244951e15615626ae170b095192da2a69f0b[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 17:59:18 2013 -0400
+
+    Small bugfix.
+
+[33mcommit 7f35f26fad91625fadbe42b733797882f78be630[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 17:49:51 2013 -0400
+
+    Cleaned up extra NodeHandle.
+
+[33mcommit cd337aa26a3a2555eddb92dbef73465e93426dbc[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 16:27:04 2013 -0400
+
+    Renamed JacoAction to JacoPoseActionServer.
+    
+    This more accurately reflects what it does and will not cause problems
+    with future action servers (e.g. for angles).
+
+[33mcommit 3b2de818afc6faf6ea63e79fd6e23f600e1187cc[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 16:12:49 2013 -0400
+
+    Added some crude locking to JacoComm to fix crash.
+    
+    Multi-thread operation now possible, though not well-tested.
+
+[33mcommit b98543711d925bd25c2759d6c580436506b8a7d4[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 15:04:23 2013 -0400
+
+    Working Jaco pose action server.
+    
+    Big commit of implemented pose action server. Type conversion moved to
+    dedicated wrappers to make sure it's only done in one place.
+    
+    Big caveat here is that the Jaco API is not thread safe and the ROS code
+    needs locking to make sure two threads don't call into the API at the
+    same time.
+
+[33mcommit 6bc5aedf642f444b7bdc86806c13912b5179a750[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 00:00:43 2013 -0400
+
+    Some initial updates for actions.
+
+[33mcommit 0c84532e481e1ec99336ea0d1afe12a6ed29d237[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jul 5 00:00:08 2013 -0400
+
+    Renamed actions to be more idiomatic ROS.
+
+[33mcommit 1aa3adfcd319c1084d3be059815c3bcb8f16b530[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 23:08:14 2013 -0400
+
+    Start of actionlib functionality.
+
+[33mcommit acca6bf0caf9ffb182a0523108126d436b5fb7da[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Fri Jul 5 16:01:28 2013 -0400
+
+    Removed "Fingers" from the JointState message.
+
+[33mcommit 8db4868c10d37ccbb03949f5443db431301e15f7[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Fri Jul 5 15:34:58 2013 -0400
+
+    set_joint_angle now accepts Transformed angles instead of raw angles.
+    
+    The transformed angles match what is published by the joint_state topic.
+
+[33mcommit ff941065c864eb28473f4dd9e0c8c815055ae067[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 16:49:25 2013 -0400
+
+    Comm object is now passed into JacoArm.
+    
+    This allows using a single comm object between multiple other libraries.
+    Comm object owns the Jaco API (and its state).
+
+[33mcommit e12eb886904dd1228f939259940197abec2a1bb7[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 16:48:58 2013 -0400
+
+    Remove dependency on dynamic reconfigure.
+
+[33mcommit 7b9a81f8a689899346d3e562adf203cc4ebdd92e[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 16:42:49 2013 -0400
+
+    Broke out class from main()
+
+[33mcommit 16f8f87296c9e60d77289537660b352ae80d7d3a[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 16:19:50 2013 -0400
+
+    Added actionlib to dependencies and CMakeLists.txt
+
+[33mcommit d8d3ea4d962f733a3b146166d6cee9111c65246a[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 14:12:18 2013 -0400
+
+    Removed package.xml file from jaco_model.
+
+[33mcommit 9ffb4375f6066c9d87c9a7aa533e9099864e036a[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 14:09:18 2013 -0400
+
+    Fixed stop logic.
+    
+    While waiting for arm to move, ros::spinOnce so stop service is
+    processed.
+
+[33mcommit 929c9b872348599f8c8201ec47c8ae7c1640215d[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 13:10:15 2013 -0400
+
+    Split Jaco communication functionality.
+    
+    ROS-related code and code dealing with moving and querying the arm are
+    now separate.
+
+[33mcommit bc267ca3a8b0cd0c3d212106022f15332d3de013[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Thu Jul 4 12:03:39 2013 -0400
+
+    Deleted gostorage.launch file
+
+[33mcommit 16fbbd52eed300d8b9a5c441df602f957388d857[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Thu Jul 4 11:16:07 2013 -0400
+
+    Added action files for applicable actions
+
+[33mcommit 6e4d857a434152609e4d8cc1927f7a223866bc4f[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Thu Jul 4 01:15:25 2013 -0400
+
+    Cleaned up excessive "this->..."
+
+[33mcommit 89a5e61d10953c59fbef52b0d2d1e1185619343e[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 21:03:04 2013 -0400
+
+    Require a transform for cartesian control.
+    
+    Cartesian control will now error out when no transform is available to
+    the target frame instead of spinning.
+
+[33mcommit 1ca7548ea5256d4f81ad168d4be2129702ab75b0[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 20:32:48 2013 -0400
+
+    Comment and whitespace cleanup.
+    
+    Converted some comments to doxygen format for online documentation.
+
+[33mcommit f68d7e9e623934012146940372452e81119fb9a0[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 20:03:24 2013 -0400
+
+    Simplified parameters.
+    
+    Parameters for topic names are no longer required to supress warnings.
+    Parameter retrieval is a bit cleaner.
+
+[33mcommit c937ea97e9bcc69c9b5ce42c5a10721ab64256be[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 18:59:54 2013 -0400
+
+    Topic cleanup.
+    
+    Removed old topics from node and fixed launch file topic names to remove
+    leading "/". This allows topics to be put into a namespace for the arm.
+
+[33mcommit 54988c26c47b1c9329464fb1609e3465fd737772[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 18:41:18 2013 -0400
+
+    Fixed home position recognition.
+    
+    Arm can now detect when it's home (approximately) and will not enter
+    retract position when homing.
+
+[33mcommit 06ab4c7079281faa22f42a1eb019a5f59a4d0c1c[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 18:05:10 2013 -0400
+
+    General cleanup and refactoring.
+    
+    Made a bunch of comparison code more succinct.
+
+[33mcommit 39447d2f7f92a5aa834ab0b1dd73f7686ddf445e[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 16:35:02 2013 -0400
+
+    Some general cleanup and name changes.
+    
+    Service names changed to omit the "E" part:
+    Estop -> Stop
+    Estart -> Start
+
+[33mcommit 73298157156bdcea7be5d5e98c515aba0b0d74a0[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jul 3 12:41:10 2013 -0400
+
+    Use both 32-bit and 64-bit libraries.
+    
+    Put libraries into 32-bit/64-bit folders base on architecture. This
+    should allow both architectures to work. Some testing still required.
+
+[33mcommit 46e52842ff122adf1fe3a706a0b992d2bd53884b[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jun 28 16:04:54 2013 -0400
+
+    Removed generated SRV files.
+
+[33mcommit dd2aa4c7f4050eae60821a1347267e3ce9d42a03[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Fri Jun 28 13:27:51 2013 -0400
+
+    Removed workspace files and extra set of Kinova libs.
+
+[33mcommit a6d4747087442710572e76a38119e439783a3ea3[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Fri Jun 28 12:14:33 2013 -0400
+
+    Added Estop, Estart and HomeArm services
+    
+    Changed the cartesian and angular control loops to check if the arm has stopped moving,
+    rather than check to see if the destination has been reached.
+
+[33mcommit f1bf407a7a12bed13e13be217ff6c0b61f96bfcf[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Wed Jun 26 16:00:51 2013 -0400
+
+    Changed several status messages from ROS_INFO to ROS_DEBUG to avoid flooding the console with unnecessary data.
+
+[33mcommit 4295ed443fd39452cd7726d2d3c0702a4763d1ff[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jun 26 14:49:49 2013 -0400
+
+    Added gitignore for generated files.
+
+[33mcommit 54f3e199a64e34310d94a085dda1ff1b87d45958[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jun 26 14:13:37 2013 -0400
+
+    Created stack infrastructure.
+    
+    Packages are now part of "jaco" stack. Added stack.xml and
+    CMakeLists.txt files. Updated author/maintainer/description
+    tags elsewhere.
+
+[33mcommit 22c16d84f2682aee9c7fb1dda8735b23b455a042[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jun 26 10:44:23 2013 -0400
+
+    Removed generated files.
+
+[33mcommit 745fc0fc6cdc5f917596bf1ae3f5684fa12b45a3[m
+Author: Alex Bencz <abencz@clearpathrobotics.com>
+Date:   Wed Jun 26 10:41:20 2013 -0400
+
+    Fixed build bugs in TF updater node.
+
+[33mcommit 0db0c7d4327e5f6229a071e6c623b592facb1e75[m
+Author: Jeff Schmidt <jschmidt@clearpathrobotics.com>
+Date:   Wed Jun 26 10:36:39 2013 -0400
+
+    Clearpath fixes and modifications.
+
+[33mcommit aa0fbc46f48ba9f5ca62ee093da1b45959edf49b[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 12 17:23:55 2013 -0400
+
+    removed auto homing, as this position was set to an odd place
+
+[33mcommit c6cfa61b0756003465cf44da6d2af202ff53bef3[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 12 13:49:32 2013 -0400
+
+    added msg file for software pause
+
+[33mcommit d3cb8e353c34460980e67300673cbaf27a2c2ce7[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 12 13:49:11 2013 -0400
+
+    fixed driver so that it does not depend on external packages
+
+[33mcommit 52b08d3a24c2c0c676c2472c19b1e62e037acca9[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Thu Jun 6 07:14:38 2013 -0400
+
+    added msg file
+
+[33mcommit ab649a89afc265f35a5aa7b3e071b249b4bcd913[m
+Author: MDeDonato <mdedonato@ubuntu.(none)>
+Date:   Thu Jun 6 03:35:00 2013 -0400
+
+    everything works for comp.  aded homing msg
+
+[33mcommit 3fd3cfce9f9a5a3aa163a740e8137f2d7ba78e89[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 5 19:29:17 2013 -0400
+
+    fixed pause
+
+[33mcommit ebeeb57d79479d1efaa73169c332adbc33205fa4[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 5 18:00:16 2013 -0400
+
+    software stop
+
+[33mcommit f2999509627590a95c6ade39dd66f3f6e5921196[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed Jun 5 17:34:43 2013 -0400
+
+    added software homeing
+
+[33mcommit 24c7b45beaf2220ceeddb05d34010bdaa7a77fcb[m
+Merge: 5f4b786 42ad820
+Author: MDeDonato <mdedonato@ubuntu.(none)>
+Date:   Tue Jun 4 18:27:46 2013 -0400
+
+    worksMerge branch 'try_this' into development
+    
+    Conflicts:
+            jaco_driver/src/nodes/jaco_arm_driver.cpp
+
+[33mcommit 42ad8206f4576446be029968df844c2d419bed0b[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Tue Jun 4 18:18:16 2013 -0400
+
+    homing works
+
+[33mcommit 5f4b7867e1f07d5c489033328c6eec4ac8228c39[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Tue Jun 4 15:47:45 2013 -0400
+
+    jaco arm fingers should work
+
+[33mcommit 3b150d596b143f673aa7489eccbc9561d0bb12d7[m
+Author: MDeDonato <mdedonato@ubuntu.(none)>
+Date:   Tue Jun 4 15:01:51 2013 -0400
+
+    modified jaco driver
+
+[33mcommit 26b2b71752722fd094100055111c0d6aaa1fe4cc[m
+Author: MDeDonato <mdedonato@ubuntu.(none)>
+Date:   Tue Jun 4 14:10:04 2013 -0400
+
+    updated code for testing
+
+[33mcommit f3ce4d8608d672f294ec7cebdace42c8bd76c0ad[m
+Author: bpwiselybabu <bpwiselybabu@wpi.edu>
+Date:   Tue Jun 4 03:47:39 2013 -0400
+
+    added support for the go home functionality
+
+[33mcommit 6f1c30c6f2bd5e10ea08a210b26a81c006890918[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Mon Jun 3 17:25:57 2013 -0400
+
+    added homing
+
+[33mcommit 95509b7b8fa3d3a4e8126e4239a184b592e1cc10[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Sun Jun 2 22:05:38 2013 -0400
+
+    remove print statement
+
+[33mcommit 3ea984a7006236c6baea51d71bc485652a7f3237[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Sun Jun 2 21:46:01 2013 -0400
+
+    added output
+
+[33mcommit 0694b89274982c295678d62e29a08631cb01bebb[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Sun Jun 2 21:27:28 2013 -0400
+
+    updated...idk what this was
+
+[33mcommit e44b74e9bcbb6850a57debd7226e03cf3e53691c[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Sun Jun 2 14:36:33 2013 -0400
+
+    updated for arm testing
+
+[33mcommit 921e434144ceaef6a7ed1df06705c5077e7fcb4e[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Sat Jun 1 02:58:26 2013 -0400
+
+    arm homing is mostly working, still have one scenario where it does not
+    work.
+
+[33mcommit 94effd1006f87353ae4543e968f659750de573ef[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Fri May 31 22:34:10 2013 -0400
+
+    added output for arm mount
+
+[33mcommit 66508241c42efdf588717eca05121043cf7d3beb[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Fri May 31 21:21:29 2013 -0400
+
+    Fixed homing!!!
+
+[33mcommit 879289a62cadd214772676d9da38820b61c71621[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Thu May 30 17:41:37 2013 -0400
+
+    added api documentation
+
+[33mcommit 1ddbf3afb64fb521d504db3777285eff22ab0da1[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 23:19:25 2013 -0400
+
+    added another print
+
+[33mcommit eca397e69a72c779c8cc57b12e832b709a1fafb6[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 23:12:29 2013 -0400
+
+    oops had some random characters in code
+
+[33mcommit b861eff9ffa68084e458c07eb53144e568bae30f[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 23:10:56 2013 -0400
+
+    added print statement on tool position
+
+[33mcommit 2eaa2a7f7b9f7d9696632e1f31a2b9e5314ab234[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 23:05:39 2013 -0400
+
+    removed conversion to arm mount
+
+[33mcommit 138157154ca732c7246414b2af2c106f964c449a[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 22:53:28 2013 -0400
+
+    added pause msg.
+
+[33mcommit 2f5a21c1b0760e8d07c03ef540e70ee4245dba31[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Wed May 29 21:00:20 2013 -0400
+
+    updated tf tree, added documents, added in test code for aero platform
+    (This needs to be removed later).
+
+[33mcommit dd7d673b6c08c9f1f59d15711f5a34c48811510d[m
+Author: mdedonato <mdedonato@ubuntu>
+Date:   Tue May 28 00:27:10 2013 -0400
+
+    cleaned up some of the code, added in homing and indexing.  The homing
+    feature may not work quite yet.  This feature still needs to be tested
+    on the actual arm.
+
+[33mcommit aa922ed6f6b039368a978b9e4e65bf541120b37e[m
+Author: MDeDonato <mdedonato@ubuntu.(none)>
+Date:   Mon May 27 16:07:22 2013 -0400
+
+    removed movit stuff.  This needs to be worked on more before adding to master
+
+[33mcommit a4d642f4beeba49983152f4773a59f8f062f2e54[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri May 24 01:14:45 2013 -0400
+
+    updated model
+
+[33mcommit 30a05e75c57fd94d58a7cdc6bd62a2876bdf95e2[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Tue May 21 14:31:48 2013 -0400
+
+    switched ar to output arm mount points...must put back
+
+[33mcommit e8cfffe5d9afa516fe87febb4fb5e27bbc7df290[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Tue May 21 01:53:11 2013 -0400
+
+    changed position msg frame to arm mount instead of api.  should change
+
+[33mcommit 62594395302b370358cd3293b0d22199a112bac1[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sun May 19 17:44:02 2013 -0400
+
+    fixed build error in cmake file
+
+[33mcommit 724327d389a0d7c03e6c60b478ac1127686cc933[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Sat May 18 19:19:12 2013 -0400
+
+    fixed urdf
+
+[33mcommit 3a169ee862f600afa036b6fd1e443ef7a7ce11fb[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Sat May 18 19:18:10 2013 -0400
+
+    added fingers
+
+[33mcommit eb9ced753aa099126eeea94a1e455eb73776b8f6[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sat May 18 16:14:02 2013 -0400
+
+    added fingers
+
+[33mcommit 54da2c28933e544de87b1913f64a79f8abcd5b87[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sat May 18 15:36:17 2013 -0400
+
+    updated models
+
+[33mcommit 17134c6f35c8433128be952794d3ffe4c4e3c0f6[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sat May 18 15:33:57 2013 -0400
+
+    added moveit files
+
+[33mcommit 299920a724bd43b9040d51aaacaed641c1060726[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed May 15 23:00:33 2013 -0400
+
+    completed urdf.  still does not work with moveit
+
+[33mcommit 8ea22b8c8f5011d88eef7621e7fa07fa4a79ee98[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Wed May 15 15:23:48 2013 -0400
+
+    added mesh
+
+[33mcommit d434421ea794dcc2961cb9ac2acf0c55024388e9[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Wed May 15 14:36:02 2013 -0400
+
+    added test module and fixed urdf
+
+[33mcommit 96722fcb2e35ea2299e143e597467fdf8c04da1e[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Wed May 15 01:31:10 2013 -0400
+
+    working on arm urdf
+
+[33mcommit 5688020275f428e28811e3d077afbd65cca17b76[m
+Author: szutshi <szutshi@wpi.edu>
+Date:   Wed May 15 00:52:14 2013 -0400
+
+    fixed jaco offset direction
+    added angle simulator
+
+[33mcommit c05ea74577f5b95bec54aacddeb22c30e7ab881d[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Tue May 14 19:51:08 2013 -0400
+
+    removed old models
+
+[33mcommit fe3543fa8b57f0fed59f3de664fdcff01bfb1e9a[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Tue May 14 19:48:05 2013 -0400
+
+    added models
+
+[33mcommit d70aa993248931ac39f0ee318294526719898a02[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Tue May 14 19:46:20 2013 -0400
+
+    added files
+
+[33mcommit 643557b4f40faaa7de3f85a34d22ef4e5df09cda[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed May 8 19:53:04 2013 -0400
+
+    removed print statements
+
+[33mcommit 66c9b11805306797ead681e6a097ddea7e658021[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed May 8 19:46:41 2013 -0400
+
+    removed print statement
+
+[33mcommit 5ec02ba62d07fa11969a91fccec5a76742a8ae2a[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri Apr 26 23:55:50 2013 -0400
+
+    Added model files, the model still needs to be linked to the tf tree
+
+[33mcommit 02266282eae91bdefd49fb7ddc637b6b5eb0ca4f[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 22 21:20:41 2013 -0400
+
+    removed test nodes from make file
+
+[33mcommit f9f778d20afcb972c5f89da43d723057a77bac5b[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 22 21:17:05 2013 -0400
+
+    need this ile
+
+[33mcommit 95f172574058e3d7b97397e1c80dcd4729155d71[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 22 21:02:50 2013 -0400
+
+    All set for testing on Aero
+
+[33mcommit 903b0003ea0dc7bd3b9b1cf773faf9c63b9faf8f[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 22 13:15:53 2013 -0400
+
+    added launch file
+
+[33mcommit 72befad1bf81ce7e1bf5b47917104e24bbe6161c[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sun Apr 21 19:44:36 2013 -0400
+
+    Velocity control working
+
+[33mcommit 96005e9c326cace426700fa16a5c3d72f58bd222[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sun Apr 21 17:44:44 2013 -0400
+
+    seperated Tf tree
+
+[33mcommit 84f306251b6333a53a82ef1bb77a486ddeac99f4[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sun Apr 21 17:43:41 2013 -0400
+
+    added dynamic reconfigure to test files
+
+[33mcommit e456706f5eba4085b6295243ca235ad7d9d3744a[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Sat Apr 20 16:15:50 2013 -0400
+
+    added position msg
+
+[33mcommit 1c36e59bc10a37b219b6157131994b0fb48d1d25[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri Apr 12 19:49:09 2013 -0400
+
+    fixed msg publishing error
+
+[33mcommit e5c36608ab05f8962445ff15254892ea6b3b51c1[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri Apr 12 01:00:43 2013 -0400
+
+    Added velocity message, and velocity tester node
+
+[33mcommit 227c80f1f72d862ab554497c2e5609662184ce3c[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri Apr 12 00:59:38 2013 -0400
+
+    Verified Kinematics
+
+[33mcommit fd404c7440ba4e84b5e13d67be40d164d17fe742[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Apr 10 17:14:29 2013 -0400
+
+    Fixed Kinematics
+
+[33mcommit 0c41ab95eb1dc5ae4acc3721f39b3d437d20aa66[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 8 11:29:52 2013 -0400
+
+    Cleaned up code
+
+[33mcommit 3b89e7d75966c42e790f130d70aae3852ac515b7[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Apr 8 11:23:32 2013 -0400
+
+    Added Kinova Libraries
+
+[33mcommit 93d10500270b6c776f5052e7256b4208228d9006[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 22:10:30 2013 -0400
+
+    fixed duration setting
+
+[33mcommit 0ac016de526b9137220e68df456c984ea0683a35[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 22:08:31 2013 -0400
+
+    added time delay
+
+[33mcommit 8d8a56a28bfbba6d7c3708d00d94200772afa6b2[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 21:57:27 2013 -0400
+
+    added spin before the transform
+
+[33mcommit 6aa6574ec41df4d124ad72e3f5ed28682d28f3d3[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 21:52:34 2013 -0400
+
+    increased wait time
+
+[33mcommit 1bc7a3382406b1c5b156876cc4365073754c5226[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 21:48:23 2013 -0400
+
+    calculate points in constructor
+
+[33mcommit 01ead75df9129ab8c03bb3dffc3efe3f6c5d8162[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 21:38:51 2013 -0400
+
+    added transform wait
+
+[33mcommit e63d11442f94df27a8c41c71d3b6e93b65215972[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 19:35:10 2013 -0400
+
+    fixed api offset
+
+[33mcommit dd8e58ce36d3eb9cade9446b1abb96ac558f9a70[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 19:27:17 2013 -0400
+
+    added test node
+
+[33mcommit ef006e86a48060a8735d33ffb44fae07a0592853[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 19:11:37 2013 -0400
+
+    added print statements
+
+[33mcommit b6fe4731d56069c24bd0ffe1e43f068c4a230d5e[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 18:47:17 2013 -0400
+
+    updated point to tf tree
+
+[33mcommit a9b1811f60193a94b4acad4cce60de9c75b1159c[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 17:33:10 2013 -0400
+
+    added makefile
+
+[33mcommit b5040321f6c966447bc3ea0b8bc8ab20749acd0c[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 17:30:06 2013 -0400
+
+    turned off print statements
+
+[33mcommit dc15bd849a884c85d495f06ce58a099c17b3a87f[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 27 16:27:14 2013 -0400
+
+    Cleaned up the code
+
+[33mcommit fbaf390f256bbf9fe2dc2c82c14ebcf12d6cdbda[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 13 19:21:45 2013 -0400
+
+    fixed help text
+
+[33mcommit 52884a3ba0cd570b9db2d688a22df10487e3d4db[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Wed Mar 13 18:54:44 2013 -0400
+
+    changed node name to jaco_arm_driver
+
+[33mcommit 71901a16c314ba726fb062524ebeb469b357b81c[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 11 17:01:25 2013 -0400
+
+    Fixed Kinematics so that they produce the correct TF tree
+
+[33mcommit 125269045c37c3c08a6e82634b3c08e5ff9b78a3[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Fri Mar 8 18:09:12 2013 -0500
+
+    Added more functionality to the control functions.
+
+[33mcommit 117920cf0b08aa8ea36151863cad6b7fd8fe5da8[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Thu Mar 7 23:46:41 2013 -0500
+
+    Cleaned up functions
+
+[33mcommit 46089ad4ca85576e7a67ca7b6b46a8a3719361c1[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Thu Mar 7 17:12:35 2013 -0500
+
+    GoHome function is working
+
+[33mcommit ce37bb78eea7c5908e82f331fb07f27d269f19fc[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Thu Mar 7 00:36:57 2013 -0500
+
+    Added debug flag for debugging without arm connected
+
+[33mcommit 55fd25493f15ed76ee60034d22d03689e45274b7[m
+Author: mpdedonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Thu Mar 7 00:30:45 2013 -0500
+
+    Added tf tree update when arm position is requested.
+
+[33mcommit b869e7289e502e5eeb72434eb13e1732afc113c2[m
+Author: MDeDonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 4 17:55:01 2013 -0500
+
+    Added the sources for the jaco_driver
+
+[33mcommit f0d39272b17b178c9e1ebbbf15f256b98ab341f1[m
+Merge: e5c2f4c b04d25d
+Author: MDeDonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 4 17:54:16 2013 -0500
+
+    Merge branch 'master' into development
+
+[33mcommit b04d25d23b5727aaab96e31fc7dbdaf5936507aa[m
+Author: MDeDonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 4 17:53:44 2013 -0500
+
+    Removed borken package
+
+[33mcommit e5c2f4c4bdf568871ab0990ec73ecd7dc2136156[m
+Author: MDeDonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 4 17:34:05 2013 -0500
+
+    Upload of Libraries
+
+[33mcommit 3d3614e0759c4761ac809484ad4ff7a84589bcc6[m
+Author: MDeDonato <mdedonato@ubuntu.ubuntu-domain>
+Date:   Mon Mar 4 17:27:39 2013 -0500
+
+    Initial upload
+
+[33mcommit 5f637fc1fbddb04c3895ce157b838c59d0955305[m
+Author: aruisdante <adampanzica@gmail.com>
+Date:   Sat Mar 2 11:22:08 2013 -0500
+
+    Added ros specific gitignore
+
+[33mcommit 4b15a996ac38b287af12e7c6d0d74ab728ad1bc8[m
+Author: Adam Panzica <adampanzica@gmail.com>
+Date:   Thu Feb 28 12:55:52 2013 -0800
+
+    Initial commit

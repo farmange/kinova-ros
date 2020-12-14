@@ -159,7 +159,7 @@ void DeviceFreejoy::updateLimits()
     }
   }
 }
-}
+}  // namespace input_device
 
 using namespace input_device;
 
